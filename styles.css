@@ -10,10 +10,6 @@
   --max:1240px;
 }
 
-/* =========================================================
-   RESET
-========================================================= */
-
 *{
   box-sizing:border-box;
 }
@@ -54,17 +50,11 @@ select{
   left:0;
   right:0;
   height:82px;
-
   display:flex;
   align-items:center;
-
   padding:0 5vw;
-
   color:#fff;
 }
-
-
-/* LOGO MDF */
 
 .brand{
   display:flex;
@@ -72,18 +62,20 @@ select{
   margin-right:auto;
 }
 
+
+/* MDF — LOGOTIPO */
+
 .brand-logo{
   font-family:"Manrope",sans-serif;
   font-size:25px;
   font-weight:800;
-  letter-spacing:-2.5px;
+  letter-spacing:-2.8px;
   line-height:1;
   transition:.25s ease;
 }
 
 .brand-logo:hover{
   opacity:.75;
-  transform:translateY(-1px);
 }
 
 
@@ -91,9 +83,7 @@ select{
 
 .main-nav{
   display:flex;
-  align-items:center;
   gap:30px;
-
   font-size:10px;
   letter-spacing:2px;
   text-transform:uppercase;
@@ -101,7 +91,6 @@ select{
 
 .main-nav a{
   opacity:.9;
-  transition:.2s ease;
 }
 
 .main-nav a:hover{
@@ -109,7 +98,7 @@ select{
 }
 
 
-/* REDES HEADER */
+/* REDES */
 
 .social-mini{
   display:flex;
@@ -120,51 +109,22 @@ select{
 .social-mini a{
   width:27px;
   height:27px;
-
   border:1px solid rgba(255,255,255,.45);
   border-radius:50%;
-
   display:grid;
   place-items:center;
-
   font-size:10px;
-
-  transition:.2s ease;
-}
-
-.social-mini a:hover{
-  background:#fff;
-  color:#111;
-  border-color:#fff;
 }
 
 
-/* MENÚ MOBILE */
+/* MENU */
 
 .menu-toggle{
   display:none;
-
   background:none;
   border:0;
   color:#fff;
-
-  width:32px;
-  height:32px;
-
-  padding:0;
-
-  cursor:pointer;
-
-  flex-direction:column;
-  justify-content:center;
-  gap:5px;
-}
-
-.menu-toggle span{
-  display:block;
-  width:22px;
-  height:1px;
-  background:#fff;
+  font-size:24px;
 }
 
 
@@ -174,23 +134,15 @@ select{
 
 .hero{
   min-height:760px;
-
   position:relative;
   display:flex;
   align-items:center;
-
   overflow:hidden;
-
   background:#1a1d1e;
   color:#fff;
 }
 
-
-/* FOTO */
-
 .photo-placeholder{
-  position:relative;
-
   background:
     radial-gradient(
       circle at 65% 28%,
@@ -211,6 +163,7 @@ select{
 
   background-size:cover;
   background-position:center;
+  position:relative;
 }
 
 .photo-placeholder[data-photo="hero.jpg"]{
@@ -233,25 +186,24 @@ select{
     );
 }
 
-.photo-placeholder span{
-  display:none;
+.photo-hint{
+  position:absolute;
+  left:14px;
+  bottom:12px;
+  font-size:9px;
+  letter-spacing:1.4px;
+  text-transform:uppercase;
+  opacity:.55;
 }
-
-
-/* FOTO HERO */
 
 .hero-photo{
   position:absolute;
   inset:0;
 }
 
-
-/* OVERLAY */
-
 .hero-overlay{
   position:absolute;
   inset:0;
-
   background:
     linear-gradient(
       90deg,
@@ -266,17 +218,11 @@ select{
     );
 }
 
-
-/* CONTENIDO */
-
 .hero-content{
   position:relative;
   z-index:2;
-
   width:min(1120px,90%);
-
   margin:95px auto 0;
-
   text-align:right;
 }
 
@@ -284,80 +230,59 @@ select{
   font-size:10px;
   letter-spacing:3px;
   font-weight:700;
-
   margin:0 0 18px;
-
   text-transform:uppercase;
 }
 
-.hero .eyebrow{
-  color:#fff;
+.eyebrow.dark{
+  color:#77746c;
 }
 
 
-/* NOMBRE DEL ARTISTA */
+/* MISMA TIPOGRAFÍA DEL LOGO */
 
 .artist-name{
   font-family:"Manrope",sans-serif;
-
   font-size:clamp(54px,7vw,105px);
-
   line-height:.88;
-
   margin:0;
-
   font-weight:800;
-
   letter-spacing:-5px;
-
-  text-transform:uppercase;
 }
 
-
-/* FRASE HERO */
+.tagline{
+  font-size:13px;
+  letter-spacing:7px;
+  text-transform:uppercase;
+  margin:28px 0 30px;
+}
 
 .hero-tagline{
   font-size:13px;
   letter-spacing:7px;
-
   text-transform:uppercase;
-
   margin:28px 0 30px;
 }
-
-
-/* BOTONES HERO */
 
 .hero-actions{
   display:flex;
   justify-content:flex-end;
-
   gap:12px;
-
   flex-wrap:wrap;
 }
 
 .btn{
   display:inline-flex;
-
   justify-content:center;
   align-items:center;
-
   min-height:46px;
-
   padding:0 22px;
-
   border-radius:28px;
-
   border:1px solid transparent;
-
   text-transform:uppercase;
-
   letter-spacing:1.2px;
-
   font-size:10px;
   font-weight:700;
-
   transition:.25s;
 }
 
@@ -383,11 +308,8 @@ select{
 .btn-dark{
   background:#17191a;
   color:#fff;
-
   width:100%;
-
   border:0;
-
   cursor:pointer;
 }
 
@@ -397,7 +319,7 @@ select{
 
 
 /* =========================================================
-   GENERALES DE SECCIÓN
+   SECCIONES GENERALES
 ========================================================= */
 
 .section{
@@ -407,46 +329,24 @@ select{
 .section-inner{
   width:100%;
   max-width:1440px;
-  margin:0 auto;
-}
-
-.section-kicker{
-  font-size:10px;
-
-  letter-spacing:3px;
-
-  font-weight:700;
-
-  text-transform:uppercase;
-
-  margin:0 0 18px;
+  margin:auto;
 }
 
 .section-intro{
-  max-width:600px;
-  margin-bottom:55px;
+  max-width:390px;
 }
 
 .section-intro h2{
   font-family:"Manrope",sans-serif;
-
   font-size:clamp(36px,4vw,58px);
-
   line-height:1.02;
-
   letter-spacing:-2.5px;
-
   margin:0 0 22px;
-
-  font-weight:700;
 }
 
 .section-description{
   color:var(--muted);
-
   font-size:14px;
-
-  max-width:480px;
 }
 
 
@@ -458,34 +358,24 @@ select{
   background:var(--cream);
 }
 
-
-/* GRID DE SENCILLOS */
-
 .release-grid{
   display:grid;
-
   grid-template-columns:repeat(4,1fr);
-
-  gap:22px;
+  gap:16px;
+  margin-top:55px;
 }
-
-
-/* TARJETA */
 
 .release-card{
   min-width:0;
 }
 
 
-/* PORTADAS DE SENCILLOS */
+/* PORTADAS SENCILLOS */
 
 .release-image{
-  width:100%;
-
   aspect-ratio:1/1;
-
+  width:100%;
   overflow:hidden;
-
   position:relative;
 
   background:
@@ -508,38 +398,18 @@ select{
 
   background-size:cover;
   background-position:center;
-
-  transition:transform .35s ease;
 }
 
-.release-card:hover .release-image{
-  transform:scale(.985);
-}
-
-
-/* INFORMACIÓN */
-
-.release-info h3{
-  font-family:"Manrope",sans-serif;
-
+.release-card h3{
   font-size:15px;
-
-  line-height:1.25;
-
-  margin:14px 0 3px;
-
-  font-weight:700;
+  margin:12px 0 3px;
 }
 
 .release-info > p{
   font-size:10px;
-
   text-transform:uppercase;
-
   letter-spacing:1.5px;
-
   color:#8a8880;
-
   margin:0;
 }
 
@@ -548,34 +418,18 @@ select{
 
 .platform-links{
   display:flex;
-
   gap:7px;
-
   margin-top:12px;
-
   flex-wrap:wrap;
 }
 
 .platform-links a{
   font-size:8px;
-
   text-transform:uppercase;
-
   letter-spacing:.7px;
-
   border:1px solid var(--line);
-
   padding:5px 7px;
-
   border-radius:12px;
-
-  transition:.2s ease;
-}
-
-.platform-links a:hover{
-  background:#111314;
-  color:#fff;
-  border-color:#111314;
 }
 
 
@@ -584,42 +438,23 @@ select{
 ========================================================= */
 
 .music-more{
-  width:100%;
-
   display:flex;
-
   justify-content:center;
   align-items:center;
-
-  margin-top:55px;
-
+  width:100%;
+  margin-top:40px;
   text-align:center;
 }
 
 .music-more-link{
   display:inline-block;
-
   font-family:"Manrope",sans-serif;
-
   font-size:9px;
-
   font-weight:800;
-
   letter-spacing:2.5px;
-
   text-transform:uppercase;
-
-  border-bottom:1px solid rgba(24,26,27,.35);
-
   padding-bottom:5px;
-
-  transition:.25s ease;
-}
-
-.music-more-link:hover{
-  border-color:#111314;
-
-  letter-spacing:3px;
+  border-bottom:1px solid rgba(24,26,27,.35);
 }
 
 
@@ -629,99 +464,52 @@ select{
 
 .discography-heading{
   display:flex;
-
   justify-content:space-between;
-
   align-items:center;
-
-  margin-top:100px;
-
-  margin-bottom:25px;
+  margin-top:85px;
+  margin-bottom:20px;
 }
 
 
-/*
-  El título DISCOGRAFÍA utiliza exactamente
-  el mismo tratamiento visual que el título
-  "Canciones que nacen en Su presencia."
-*/
+/* MISMO TAMAÑO QUE EL TÍTULO PRINCIPAL */
 
 .discography-heading .section-kicker{
   font-family:"Manrope",sans-serif;
-
   font-size:clamp(36px,4vw,58px);
-
   line-height:1.02;
-
   letter-spacing:-2.5px;
-
   font-weight:700;
-
   margin:0;
-
   text-transform:none;
 }
 
-
-/* LINK DISCOGRAFÍA */
-
 .discography-link{
   font-size:10px;
-
   text-transform:uppercase;
-
   letter-spacing:1.8px;
-
   font-weight:700;
-
-  white-space:nowrap;
-
-  transition:.2s ease;
-}
-
-.discography-link:hover{
-  opacity:.55;
 }
 
 
 /* =========================================================
-   GRID EPs
+   EPs — CUADRADOS
 ========================================================= */
 
 .ep-grid{
   display:grid;
-
   grid-template-columns:repeat(4,1fr);
-
-  gap:28px 22px;
+  gap:16px;
 }
-
-
-/* TARJETA EP */
 
 .ep-card{
   display:block;
-
-  min-width:0;
-
-  transition:transform .25s ease;
 }
-
-.ep-card:hover{
-  transform:translateY(-4px);
-}
-
-
-/* PORTADA EP — CUADRADA */
 
 .ep-image{
   width:100%;
-
   aspect-ratio:1/1;
-
-  position:relative;
-
   overflow:hidden;
+  position:relative;
 
   background:
     radial-gradient(
@@ -743,55 +531,32 @@ select{
 
   background-size:cover;
   background-position:center;
-
-  transition:transform .35s ease;
 }
-
-.ep-card:hover .ep-image{
-  transform:scale(.985);
-}
-
-
-/* INFO EP */
 
 .ep-info h3{
-  font-family:"Manrope",sans-serif;
-
   font-size:14px;
-
-  line-height:1.25;
-
-  margin:12px 0 2px;
-
-  font-weight:700;
+  margin:10px 0 2px;
 }
 
 .ep-info p{
   font-size:10px;
-
   text-transform:uppercase;
-
   letter-spacing:1.5px;
-
   color:#8a8880;
-
   margin:0;
 }
 
 
 /* =========================================================
    SOBRE MÍ
+   ESTILOS MANTENIDOS
 ========================================================= */
 
 .about-section{
   display:grid;
-
   grid-template-columns:1fr 1fr;
-
   padding:0;
-
   background:var(--black);
-
   color:#fff;
 }
 
@@ -801,33 +566,22 @@ select{
 
 .about-copy{
   padding:120px 10% 110px;
-
   display:flex;
-
   flex-direction:column;
-
   align-items:flex-start;
-
-  justify-content:center;
 }
 
 .about-copy h2{
   font-family:"Manrope",sans-serif;
-
   font-size:clamp(36px,4vw,58px);
-
   line-height:1.02;
-
   letter-spacing:-2.5px;
-
   margin:0 0 22px;
 }
 
 .about-copy > p:not(.section-kicker){
   color:rgba(255,255,255,.65);
-
   font-size:14px;
-
   max-width:530px;
 }
 
@@ -835,13 +589,10 @@ select{
   margin-top:22px;
 }
 
-
-/* FOTO SOBRE MÍ */
-
 .about-photo{
   min-height:580px;
 
-  background:
+  background-image:
     linear-gradient(
       120deg,
       rgba(0,0,0,.1),
@@ -862,21 +613,18 @@ select{
 
 /* =========================================================
    AGENDA
+   ESTILOS MANTENIDOS
 ========================================================= */
 
 .agenda-section{
   min-height:530px;
-
   position:relative;
-
   color:#fff;
-
   overflow:hidden;
 }
 
 .agenda-background{
   position:absolute;
-
   inset:0;
 
   background-image:
@@ -890,27 +638,21 @@ select{
 
 .agenda-overlay{
   position:absolute;
-
   inset:0;
-
   background:rgba(0,0,0,.43);
 }
 
 .agenda-content{
   position:relative;
-
   z-index:2;
 
   min-height:530px;
-
   max-width:1240px;
-
   margin:auto;
 
   padding:100px 5vw;
 
   display:grid;
-
   grid-template-columns:1fr 330px;
 
   gap:70px;
@@ -920,137 +662,85 @@ select{
 
 .agenda-content h2{
   font-family:"Manrope",sans-serif;
-
   font-size:clamp(36px,4vw,58px);
-
   line-height:1.02;
-
   letter-spacing:-2.5px;
-
   margin:0 0 16px;
 }
 
 .agenda-content > p:not(.section-kicker){
   color:rgba(255,255,255,.65);
-
   font-size:14px;
-
-  max-width:470px;
 }
 
 .agenda-list{
   border-left:1px solid rgba(255,255,255,.3);
-
   padding-left:32px;
 }
 
 .agenda-item{
   padding:18px 0;
-
   border-bottom:1px solid rgba(255,255,255,.15);
-
   display:flex;
-
   flex-direction:column;
 }
 
-.agenda-item span{
+.agenda-item strong{
   font-size:14px;
 }
 
-.agenda-item strong{
+.agenda-item span{
   font-size:10px;
-
   letter-spacing:1px;
-
   text-transform:uppercase;
-
   opacity:.55;
-
   margin-top:3px;
 }
 
 
 /* =========================================================
    CONTACTO
+   ESTILOS MANTENIDOS
 ========================================================= */
 
 .contact-section{
-  background:var(--cream);
-
   padding:110px 5vw;
 }
 
 .contact-grid{
   display:grid;
-
   grid-template-columns:250px 1fr;
-
-  gap:70px;
-
+  gap:60px;
   align-items:start;
-
-  max-width:1100px;
-
-  margin:auto;
 }
 
 .contact-copy h2{
   font-family:"Manrope",sans-serif;
-
   font-size:clamp(36px,4vw,58px);
-
   line-height:1.02;
-
   letter-spacing:-2.5px;
-
   margin:0 0 22px;
 }
 
 .contact-copy > p:not(.section-kicker){
   color:var(--muted);
-
   font-size:14px;
-
-  max-width:460px;
 }
-
-.contact-signature{
-  font-family:"Permanent Marker",cursive;
-
-  font-size:23px;
-
-  line-height:1.1;
-
-  transform:rotate(-5deg);
-
-  margin-top:45px;
-}
-
-
-/* FORMULARIO */
 
 .contact-form{
   display:grid;
-
   grid-template-columns:1fr 1fr;
-
   gap:12px;
 }
 
 .contact-form label{
   display:flex;
-
   flex-direction:column;
-
   gap:7px;
 
   font-size:9px;
-
   letter-spacing:1.2px;
-
   text-transform:uppercase;
-
   font-weight:700;
 }
 
@@ -1058,33 +748,22 @@ select{
 .contact-form select,
 .contact-form textarea{
   width:100%;
-
   border:1px solid var(--line);
-
   background:transparent;
-
   padding:14px 15px;
-
   outline:none;
-
   color:var(--ink);
-
   border-radius:2px;
-
-  text-transform:none;
-
-  letter-spacing:0;
-
-  font-weight:400;
 }
 
-.contact-form textarea{
-  resize:vertical;
-}
-
-.contact-form label:nth-child(4),
+.contact-form textarea,
+.contact-form select,
 .contact-form .btn-dark{
   grid-column:1/-1;
+}
+
+.contact-form select{
+  appearance:auto;
 }
 
 .contact-form input:focus,
@@ -1093,35 +772,25 @@ select{
   border-color:#555;
 }
 
-
-/* REDES CONTACTO */
+.contact-signature{
+  font-family:"Permanent Marker",cursive;
+  font-size:23px;
+  line-height:1.1;
+  transform:rotate(-5deg);
+  margin-top:45px;
+}
 
 .contact-socials{
   display:flex;
-
   gap:22px;
-
   margin-top:70px;
-
   padding-top:25px;
-
   border-top:1px solid var(--line);
 
   font-size:10px;
-
   text-transform:uppercase;
-
   letter-spacing:1.5px;
-
   font-weight:700;
-}
-
-.contact-socials a{
-  transition:.2s ease;
-}
-
-.contact-socials a:hover{
-  opacity:.5;
 }
 
 
@@ -1131,33 +800,24 @@ select{
 
 .site-footer{
   min-height:90px;
-
   background:#111314;
-
   color:#fff;
 
   display:flex;
-
   align-items:center;
-
   justify-content:space-between;
 
   padding:0 5vw;
 
   font-size:9px;
-
   letter-spacing:1.6px;
-
   text-transform:uppercase;
 }
 
 .footer-brand{
   font-family:"Manrope",sans-serif;
-
   font-size:20px;
-
   font-weight:800;
-
   letter-spacing:-2px;
 }
 
@@ -1167,8 +827,6 @@ select{
 
 .site-footer > a{
   opacity:.7;
-
-  transition:.2s ease;
 }
 
 .site-footer > a:hover{
@@ -1178,35 +836,6 @@ select{
 
 /* =========================================================
    TABLET
-========================================================= */
-
-@media(max-width:1100px){
-
-  .main-nav{
-    gap:18px;
-  }
-
-  .social-mini{
-    margin-left:20px;
-  }
-
-  .release-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .ep-grid{
-    grid-template-columns:repeat(3,1fr);
-  }
-
-  .about-copy{
-    padding:90px 7%;
-  }
-
-}
-
-
-/* =========================================================
-   TABLET PEQUEÑO
 ========================================================= */
 
 @media(max-width:950px){
@@ -1221,8 +850,7 @@ select{
 
   .section-intro{
     max-width:600px;
-
-    margin-bottom:40px;
+    margin-bottom:35px;
   }
 
   .release-grid{
@@ -1234,23 +862,11 @@ select{
   }
 
   .about-section{
-    grid-template-columns:1fr;
-  }
-
-  .about-photo{
-    min-height:500px;
-  }
-
-  .agenda-content{
-    grid-template-columns:1fr 300px;
-
-    gap:45px;
+    grid-template-columns:1fr 1fr;
   }
 
   .contact-grid{
     grid-template-columns:1fr 1.5fr;
-
-    gap:45px;
   }
 
 }
@@ -1264,37 +880,39 @@ select{
 
   .site-header{
     height:68px;
-
     padding:0 6vw;
   }
-
-
-  /* MENU */
 
   .menu-toggle{
     display:flex;
 
     margin-left:auto;
+
+    flex-direction:column;
+    justify-content:center;
+    gap:5px;
+  }
+
+  .menu-toggle span{
+    width:22px;
+    height:1px;
+    background:#fff;
   }
 
   .main-nav{
     position:absolute;
 
     top:68px;
-
     left:5vw;
     right:5vw;
 
-    background:rgba(17,19,20,.97);
+    background:rgba(17,19,20,.96);
 
     padding:22px;
 
     display:none;
 
     flex-direction:column;
-
-    align-items:flex-start;
-
     gap:18px;
   }
 
@@ -1311,29 +929,23 @@ select{
 
   .hero-content{
     margin-top:100px;
-
     text-align:left;
   }
 
   .artist-name{
     font-size:58px;
-
     letter-spacing:-3px;
   }
 
   .hero-tagline{
     font-size:10px;
-
     letter-spacing:3px;
-
     line-height:1.6;
   }
 
   .hero-actions{
     justify-content:flex-start;
-
     flex-direction:column;
-
     align-items:flex-start;
   }
 
@@ -1342,14 +954,24 @@ select{
   }
 
 
-  /* SECCIONES */
+  /* MÚSICA */
 
   .section{
     padding:75px 6vw;
   }
 
-  .music-section{
+  #musica{
     padding-top:80px;
+  }
+
+  .release-grid{
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+  }
+
+  .ep-grid{
+    grid-template-columns:1fr 1fr;
+    gap:12px;
   }
 
   .section-intro h2{
@@ -1357,19 +979,10 @@ select{
   }
 
 
-  /* SENCILLOS */
-
-  .release-grid{
-    grid-template-columns:1fr 1fr;
-
-    gap:22px 12px;
-  }
-
-
   /* VER TODA LA MÚSICA */
 
   .music-more{
-    margin-top:45px;
+    margin-top:40px;
   }
 
 
@@ -1377,9 +990,7 @@ select{
 
   .discography-heading{
     flex-direction:column;
-
     align-items:flex-start;
-
     gap:18px;
 
     margin-top:75px;
@@ -1389,32 +1000,15 @@ select{
     font-size:44px;
   }
 
-  .discography-link{
-    font-size:9px;
-  }
-
-
-  /* EPs */
-
-  .ep-grid{
-    grid-template-columns:1fr 1fr;
-
-    gap:24px 12px;
-  }
-
-  .ep-image{
-    aspect-ratio:1/1;
-  }
-
 
   /* SOBRE MÍ */
 
-  .about-copy{
-    padding:80px 6vw;
+  .about-section{
+    grid-template-columns:1fr;
   }
 
-  .about-copy h2{
-    font-size:44px;
+  .about-copy{
+    padding:80px 6vw;
   }
 
   .about-photo{
@@ -1434,7 +1028,6 @@ select{
 
   .agenda-list{
     border-left:0;
-
     border-top:1px solid rgba(255,255,255,.3);
 
     padding:30px 0 0;
@@ -1449,7 +1042,6 @@ select{
 
   .contact-grid{
     grid-template-columns:1fr;
-
     gap:35px;
   }
 
@@ -1457,16 +1049,16 @@ select{
     grid-template-columns:1fr;
   }
 
-  .contact-form label:nth-child(4),
+  .contact-form input,
+  .contact-form select,
+  .contact-form textarea,
   .contact-form .btn-dark{
     grid-column:1;
   }
 
   .contact-socials{
     flex-wrap:wrap;
-
     gap:15px 22px;
-
     margin-top:55px;
   }
 
@@ -1499,11 +1091,13 @@ select{
 
   .artist-name{
     font-size:50px;
-
     letter-spacing:-2.5px;
   }
 
-  .section-intro h2,
+  .section-intro h2{
+    font-size:40px;
+  }
+
   .about-copy h2,
   .agenda-content h2,
   .contact-copy h2{
