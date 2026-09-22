@@ -39,9 +39,9 @@ select{
 }
 
 
-/* =========================================================
+/* =========================================
    HEADER
-========================================================= */
+========================================= */
 
 .site-header{
   position:absolute;
@@ -50,9 +50,12 @@ select{
   left:0;
   right:0;
   height:82px;
+
   display:flex;
   align-items:center;
+
   padding:0 5vw;
+
   color:#fff;
 }
 
@@ -62,43 +65,31 @@ select{
   margin-right:auto;
 }
 
-
-/* MDF — LOGOTIPO */
-
-.brand-logo{
-  font-family:"Manrope",sans-serif;
+.brand-mark{
+  font-family:"Permanent Marker",cursive;
   font-size:25px;
-  font-weight:800;
-  letter-spacing:-2.8px;
-  line-height:1;
-  transition:.25s ease;
+  letter-spacing:-4px;
 }
 
-.brand-logo:hover{
-  opacity:.75;
-}
-
-
-/* NAVEGACIÓN */
-
-.main-nav{
+.nav{
   display:flex;
   gap:30px;
+
   font-size:10px;
   letter-spacing:2px;
   text-transform:uppercase;
 }
 
-.main-nav a{
+.nav a{
   opacity:.9;
 }
 
-.main-nav a:hover{
+.nav a:hover{
   opacity:1;
 }
 
 
-/* REDES */
+/* REDES SUPERIORES DEL HERO */
 
 .social-mini{
   display:flex;
@@ -109,38 +100,39 @@ select{
 .social-mini a{
   width:27px;
   height:27px;
+
   border:1px solid rgba(255,255,255,.45);
   border-radius:50%;
+
   display:grid;
   place-items:center;
+
   font-size:10px;
+
+  transition:.2s ease;
+}
+
+.social-mini a:hover{
+  background:#fff;
+  color:#111;
+  border-color:#fff;
 }
 
 
-/* MENU */
-
 .menu-toggle{
   display:none;
+
   background:none;
   border:0;
+
   color:#fff;
   font-size:24px;
 }
 
 
-/* =========================================================
-   HERO
-========================================================= */
-
-.hero{
-  min-height:760px;
-  position:relative;
-  display:flex;
-  align-items:center;
-  overflow:hidden;
-  background:#1a1d1e;
-  color:#fff;
-}
+/* =========================================
+   PLACEHOLDERS / IMÁGENES
+========================================= */
 
 .photo-placeholder{
   background:
@@ -163,6 +155,7 @@ select{
 
   background-size:cover;
   background-position:center;
+
   position:relative;
 }
 
@@ -190,10 +183,31 @@ select{
   position:absolute;
   left:14px;
   bottom:12px;
+
   font-size:9px;
   letter-spacing:1.4px;
   text-transform:uppercase;
+
   opacity:.55;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero{
+  min-height:760px;
+
+  position:relative;
+
+  display:flex;
+  align-items:center;
+
+  overflow:hidden;
+
+  background:#1a1d1e;
+  color:#fff;
 }
 
 .hero-photo{
@@ -204,6 +218,7 @@ select{
 .hero-overlay{
   position:absolute;
   inset:0;
+
   background:
     linear-gradient(
       90deg,
@@ -221,8 +236,11 @@ select{
 .hero-content{
   position:relative;
   z-index:2;
+
   width:min(1120px,90%);
+
   margin:95px auto 0;
+
   text-align:right;
 }
 
@@ -230,7 +248,9 @@ select{
   font-size:10px;
   letter-spacing:3px;
   font-weight:700;
+
   margin:0 0 18px;
+
   text-transform:uppercase;
 }
 
@@ -238,15 +258,22 @@ select{
   color:#77746c;
 }
 
-
-/* MISMA TIPOGRAFÍA DEL LOGO */
-
-.artist-name{
+.hero h1{
   font-family:"Manrope",sans-serif;
+
   font-size:clamp(54px,7vw,105px);
   line-height:.88;
+
   margin:0;
+
   font-weight:800;
+
+  letter-spacing:-5px;
+}
+
+.hero h1 span{
+  font-family:"Permanent Marker",cursive;
+  font-weight:400;
   letter-spacing:-5px;
 }
 
@@ -254,35 +281,37 @@ select{
   font-size:13px;
   letter-spacing:7px;
   text-transform:uppercase;
-  margin:28px 0 30px;
-}
 
-.hero-tagline{
-  font-size:13px;
-  letter-spacing:7px;
-  text-transform:uppercase;
   margin:28px 0 30px;
 }
 
 .hero-actions{
   display:flex;
   justify-content:flex-end;
+
   gap:12px;
   flex-wrap:wrap;
 }
 
 .btn{
   display:inline-flex;
+
   justify-content:center;
   align-items:center;
+
   min-height:46px;
+
   padding:0 22px;
+
   border-radius:28px;
   border:1px solid transparent;
+
   text-transform:uppercase;
   letter-spacing:1.2px;
+
   font-size:10px;
   font-weight:700;
+
   transition:.25s;
 }
 
@@ -308,8 +337,11 @@ select{
 .btn-dark{
   background:#17191a;
   color:#fff;
+
   width:100%;
+
   border:0;
+
   cursor:pointer;
 }
 
@@ -317,173 +349,67 @@ select{
   opacity:.85;
 }
 
+.scroll-note{
+  position:absolute;
 
-/* =========================================================
+  bottom:28px;
+  left:5vw;
+
+  font-size:9px;
+  letter-spacing:3px;
+
+  opacity:.6;
+}
+
+
+/* =========================================
    SECCIONES GENERALES
-========================================================= */
+========================================= */
 
 .section{
   padding:110px 5vw;
 }
 
-.section-inner{
-  width:100%;
-  max-width:1440px;
-  margin:auto;
+.light{
+  background:var(--cream);
+}
+
+.dark{
+  background:var(--black);
+  color:#fff;
 }
 
 .section-intro{
   max-width:390px;
 }
 
-.section-intro h2{
+.section-intro h2,
+.split h2,
+.agenda h2,
+.contact h2{
   font-family:"Manrope",sans-serif;
+
   font-size:clamp(36px,4vw,58px);
   line-height:1.02;
+
   letter-spacing:-2.5px;
+
   margin:0 0 22px;
 }
 
-.section-description{
+.section-intro>p:not(.eyebrow),
+.split-copy>p,
+.agenda-content>div>p:not(.eyebrow),
+.contact-copy>p{
   color:var(--muted);
   font-size:14px;
 }
 
-
-/* =========================================================
-   MÚSICA
-========================================================= */
-
-.music-section{
-  background:var(--cream);
-}
-
-.release-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:16px;
-  margin-top:55px;
-}
-
-.release-card{
-  min-width:0;
-}
-
-
-/* PORTADAS SENCILLOS */
-
-.release-image{
-  aspect-ratio:1/1;
-  width:100%;
-  overflow:hidden;
-  position:relative;
-
-  background:
-    radial-gradient(
-      circle at 65% 28%,
-      rgba(255,255,255,.22),
-      transparent 12%
-    ),
-    radial-gradient(
-      circle at 20% 45%,
-      rgba(255,255,255,.13),
-      transparent 14%
-    ),
-    linear-gradient(
-      135deg,
-      #2c2e2f,
-      #111314 58%,
-      #262827
-    );
-
-  background-size:cover;
-  background-position:center;
-}
-
-.release-card h3{
-  font-size:15px;
-  margin:12px 0 3px;
-}
-
-.release-info > p{
-  font-size:10px;
-  text-transform:uppercase;
-  letter-spacing:1.5px;
-  color:#8a8880;
-  margin:0;
-}
-
-
-/* PLATAFORMAS */
-
-.platform-links{
-  display:flex;
-  gap:7px;
-  margin-top:12px;
-  flex-wrap:wrap;
-}
-
-.platform-links a{
-  font-size:8px;
-  text-transform:uppercase;
-  letter-spacing:.7px;
-  border:1px solid var(--line);
-  padding:5px 7px;
-  border-radius:12px;
-}
-
-
-/* =========================================================
-   VER TODA LA MÚSICA
-========================================================= */
-
-.music-more{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  width:100%;
-  margin-top:40px;
-  text-align:center;
-}
-
-.music-more-link{
+.text-link{
   display:inline-block;
-  font-family:"Manrope",sans-serif;
-  font-size:9px;
-  font-weight:800;
-  letter-spacing:2.5px;
-  text-transform:uppercase;
-  padding-bottom:5px;
-  border-bottom:1px solid rgba(24,26,27,.35);
-}
 
+  margin-top:25px;
 
-/* =========================================================
-   DISCOGRAFÍA
-========================================================= */
-
-.discography-heading{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  margin-top:85px;
-  margin-bottom:20px;
-}
-
-
-/* MISMO TAMAÑO QUE EL TÍTULO PRINCIPAL */
-
-.discography-heading .section-kicker{
-  font-family:"Manrope",sans-serif;
-  font-size:clamp(36px,4vw,58px);
-  line-height:1.02;
-  letter-spacing:-2.5px;
-  font-weight:700;
-  margin:0;
-  text-transform:none;
-}
-
-.discography-link{
   font-size:10px;
   text-transform:uppercase;
   letter-spacing:1.8px;
@@ -491,105 +417,211 @@ select{
 }
 
 
-/* =========================================================
-   EPs — CUADRADOS
-========================================================= */
+/* =========================================
+   MÚSICA
+========================================= */
+
+#musica{
+  display:grid;
+  grid-template-columns:280px 1fr;
+
+  gap:60px;
+
+  max-width:1440px;
+  margin:auto;
+}
+
+.music-content{
+  min-width:0;
+}
+
+.release-grid{
+  display:grid;
+
+  grid-template-columns:repeat(4,1fr);
+
+  gap:16px;
+}
+
+.release-card{
+  min-width:0;
+}
+
+.release-image{
+  display:block;
+
+  width:100%;
+
+  aspect-ratio:1/1;
+
+  overflow:hidden;
+
+  transition:.25s ease;
+}
+
+.release-image:hover{
+  transform:translateY(-3px);
+}
+
+.release-card h3{
+  font-size:15px;
+  margin:12px 0 3px;
+}
+
+.release-card>p,
+.ep-card>p{
+  font-size:10px;
+
+  text-transform:uppercase;
+  letter-spacing:1.5px;
+
+  color:#8a8880;
+
+  margin:0;
+}
+
+.platforms{
+  display:flex;
+  gap:7px;
+
+  margin-top:12px;
+
+  flex-wrap:wrap;
+}
+
+.platforms a{
+  font-size:8px;
+
+  text-transform:uppercase;
+  letter-spacing:.7px;
+
+  border:1px solid var(--line);
+
+  padding:5px 7px;
+
+  border-radius:12px;
+
+  transition:.2s ease;
+}
+
+.platforms a:hover{
+  background:#181a1b;
+  color:#fff;
+}
+
+
+/* =========================================
+   DISCOGRAFÍA
+========================================= */
+
+.ep-section{
+  padding-top:55px;
+}
+
+.section-topline{
+  display:flex;
+
+  justify-content:space-between;
+  align-items:center;
+
+  margin-bottom:20px;
+}
+
+.section-topline h2{
+  font-family:"Manrope",sans-serif;
+
+  font-size:clamp(36px,4vw,58px);
+  line-height:1.02;
+
+  letter-spacing:-2.5px;
+
+  margin:0;
+}
 
 .ep-grid{
   display:grid;
+
   grid-template-columns:repeat(4,1fr);
+
   gap:16px;
 }
 
 .ep-card{
   display:block;
+
+  min-width:0;
 }
 
-.ep-image{
-  width:100%;
+.ep-cover{
   aspect-ratio:1/1;
+
+  display:flex;
+
+  align-items:center;
+  justify-content:center;
+
+  color:#fff;
+
   overflow:hidden;
-  position:relative;
 
-  background:
-    radial-gradient(
-      circle at 65% 28%,
-      rgba(255,255,255,.22),
-      transparent 12%
-    ),
-    radial-gradient(
-      circle at 20% 45%,
-      rgba(255,255,255,.13),
-      transparent 14%
-    ),
-    linear-gradient(
-      135deg,
-      #2c2e2f,
-      #111314 58%,
-      #262827
-    );
-
-  background-size:cover;
-  background-position:center;
+  transition:.25s ease;
 }
 
-.ep-info h3{
+.ep-card:hover .ep-cover{
+  transform:translateY(-3px);
+}
+
+.ep-cover span{
+  font-size:12px;
+  letter-spacing:4px;
+}
+
+.ep-card h3{
   font-size:14px;
   margin:10px 0 2px;
 }
 
-.ep-info p{
-  font-size:10px;
-  text-transform:uppercase;
-  letter-spacing:1.5px;
-  color:#8a8880;
-  margin:0;
-}
 
-
-/* =========================================================
+/* =========================================
    SOBRE MÍ
-   ESTILOS MANTENIDOS
-========================================================= */
+   VERSIÓN ORIGINAL
+========================================= */
 
-.about-section{
+.split{
   display:grid;
+
   grid-template-columns:1fr 1fr;
+
   padding:0;
-  background:var(--black);
-  color:#fff;
+
+  background:var(--cream);
+
+  color:var(--ink);
 }
 
-.about-content{
-  display:contents;
-}
-
-.about-copy{
+.split-copy{
   padding:120px 10% 110px;
+
   display:flex;
+
   flex-direction:column;
+
   align-items:flex-start;
 }
 
-.about-copy h2{
-  font-family:"Manrope",sans-serif;
-  font-size:clamp(36px,4vw,58px);
-  line-height:1.02;
-  letter-spacing:-2.5px;
-  margin:0 0 22px;
+.split-copy h2{
+  color:var(--ink);
 }
 
-.about-copy > p:not(.section-kicker){
-  color:rgba(255,255,255,.65);
-  font-size:14px;
-  max-width:530px;
+.split-copy>p{
+  color:var(--muted);
 }
 
-.about-copy .btn{
+.split-copy .btn{
   margin-top:22px;
 }
 
-.about-photo{
+.split-photo{
   min-height:580px;
 
   background-image:
@@ -608,22 +640,28 @@ select{
       #3d3e3c,
       #161818 65%
     );
+
+  background-size:cover;
+  background-position:center;
 }
 
 
-/* =========================================================
+/* =========================================
    AGENDA
-   ESTILOS MANTENIDOS
-========================================================= */
+   VERSIÓN ORIGINAL
+========================================= */
 
-.agenda-section{
+.agenda{
   min-height:530px;
+
   position:relative;
+
   color:#fff;
+
   overflow:hidden;
 }
 
-.agenda-background{
+.agenda-bg{
   position:absolute;
   inset:0;
 
@@ -634,11 +672,15 @@ select{
       #151616 50%,
       #38332e
     );
+
+  background-size:cover;
+  background-position:center;
 }
 
 .agenda-overlay{
   position:absolute;
   inset:0;
+
   background:rgba(0,0,0,.43);
 }
 
@@ -647,12 +689,15 @@ select{
   z-index:2;
 
   min-height:530px;
+
   max-width:1240px;
+
   margin:auto;
 
   padding:100px 5vw;
 
   display:grid;
+
   grid-template-columns:1fr 330px;
 
   gap:70px;
@@ -661,98 +706,94 @@ select{
 }
 
 .agenda-content h2{
-  font-family:"Manrope",sans-serif;
-  font-size:clamp(36px,4vw,58px);
-  line-height:1.02;
-  letter-spacing:-2.5px;
-  margin:0 0 16px;
+  color:#fff;
+  margin-bottom:16px;
 }
 
-.agenda-content > p:not(.section-kicker){
-  color:rgba(255,255,255,.65);
+.agenda-content>div>p:not(.eyebrow){
+  color:rgba(255,255,255,.7);
   font-size:14px;
 }
 
-.agenda-list{
+.upcoming{
   border-left:1px solid rgba(255,255,255,.3);
+
   padding-left:32px;
 }
 
-.agenda-item{
+.date-item{
   padding:18px 0;
+
   border-bottom:1px solid rgba(255,255,255,.15);
+
   display:flex;
+
   flex-direction:column;
 }
 
-.agenda-item strong{
+.date-item strong{
   font-size:14px;
 }
 
-.agenda-item span{
+.date-item span{
   font-size:10px;
+
   letter-spacing:1px;
+
   text-transform:uppercase;
+
   opacity:.55;
+
   margin-top:3px;
 }
 
 
-/* =========================================================
+/* =========================================
    CONTACTO
-   ESTILOS MANTENIDOS
-========================================================= */
+   VERSIÓN ORIGINAL
+========================================= */
 
-.contact-section{
-  padding:110px 5vw;
-}
-
-.contact-grid{
+.contact{
   display:grid;
-  grid-template-columns:250px 1fr;
+
+  grid-template-columns:250px 1fr 210px;
+
   gap:60px;
+
   align-items:start;
 }
 
 .contact-copy h2{
-  font-family:"Manrope",sans-serif;
-  font-size:clamp(36px,4vw,58px);
-  line-height:1.02;
-  letter-spacing:-2.5px;
-  margin:0 0 22px;
+  color:var(--ink);
 }
 
-.contact-copy > p:not(.section-kicker){
+.contact-copy>p{
   color:var(--muted);
-  font-size:14px;
 }
 
 .contact-form{
   display:grid;
+
   grid-template-columns:1fr 1fr;
+
   gap:12px;
-}
-
-.contact-form label{
-  display:flex;
-  flex-direction:column;
-  gap:7px;
-
-  font-size:9px;
-  letter-spacing:1.2px;
-  text-transform:uppercase;
-  font-weight:700;
 }
 
 .contact-form input,
 .contact-form select,
 .contact-form textarea{
   width:100%;
+
   border:1px solid var(--line);
+
   background:transparent;
+
   padding:14px 15px;
+
   outline:none;
+
   color:var(--ink);
+
   border-radius:2px;
 }
 
@@ -772,75 +813,79 @@ select{
   border-color:#555;
 }
 
-.contact-signature{
+.big-socials{
+  display:flex;
+
+  flex-direction:column;
+
+  gap:8px;
+
+  font-size:12px;
+}
+
+.big-socials a:hover{
+  text-decoration:underline;
+}
+
+.signature{
   font-family:"Permanent Marker",cursive;
+
   font-size:23px;
+
   line-height:1.1;
+
   transform:rotate(-5deg);
+
   margin-top:45px;
 }
 
-.contact-socials{
-  display:flex;
-  gap:22px;
-  margin-top:70px;
-  padding-top:25px;
-  border-top:1px solid var(--line);
 
-  font-size:10px;
-  text-transform:uppercase;
-  letter-spacing:1.5px;
-  font-weight:700;
-}
-
-
-/* =========================================================
+/* =========================================
    FOOTER
-========================================================= */
+========================================= */
 
-.site-footer{
+.footer{
   min-height:90px;
+
   background:#111314;
+
   color:#fff;
 
   display:flex;
+
   align-items:center;
+
   justify-content:space-between;
 
   padding:0 5vw;
 
   font-size:9px;
+
   letter-spacing:1.6px;
+
   text-transform:uppercase;
 }
 
-.footer-brand{
-  font-family:"Manrope",sans-serif;
-  font-size:20px;
-  font-weight:800;
-  letter-spacing:-2px;
-}
-
-.site-footer p{
+.footer p{
   opacity:.65;
 }
 
-.site-footer > a{
+.footer>a{
   opacity:.7;
 }
 
-.site-footer > a:hover{
+.footer>a:hover{
   opacity:1;
 }
 
 
-/* =========================================================
+/* =========================================
    TABLET
-========================================================= */
+========================================= */
 
 @media(max-width:950px){
 
-  .main-nav{
+  .nav{
     gap:16px;
   }
 
@@ -848,8 +893,13 @@ select{
     display:none;
   }
 
+  #musica{
+    grid-template-columns:1fr;
+  }
+
   .section-intro{
     max-width:600px;
+
     margin-bottom:35px;
   }
 
@@ -861,48 +911,37 @@ select{
     grid-template-columns:repeat(2,1fr);
   }
 
-  .about-section{
-    grid-template-columns:1fr 1fr;
-  }
-
-  .contact-grid{
+  .contact{
     grid-template-columns:1fr 1.5fr;
   }
 
+  .contact-socials{
+    grid-column:1/-1;
+  }
 }
 
 
-/* =========================================================
+/* =========================================
    MOBILE
-========================================================= */
+========================================= */
 
 @media(max-width:700px){
 
   .site-header{
     height:68px;
+
     padding:0 6vw;
   }
 
   .menu-toggle{
-    display:flex;
-
-    margin-left:auto;
-
-    flex-direction:column;
-    justify-content:center;
-    gap:5px;
+    display:block;
   }
 
-  .menu-toggle span{
-    width:22px;
-    height:1px;
-    background:#fff;
-  }
-
-  .main-nav{
+  .nav{
     position:absolute;
 
     top:68px;
+
     left:5vw;
     right:5vw;
 
@@ -913,10 +952,11 @@ select{
     display:none;
 
     flex-direction:column;
+
     gap:18px;
   }
 
-  .main-nav.open{
+  .nav.open{
     display:flex;
   }
 
@@ -929,23 +969,32 @@ select{
 
   .hero-content{
     margin-top:100px;
+
     text-align:left;
   }
 
-  .artist-name{
+  .hero h1{
     font-size:58px;
     letter-spacing:-3px;
   }
 
-  .hero-tagline{
+  .hero h1 span{
+    letter-spacing:-3px;
+  }
+
+  .tagline{
     font-size:10px;
+
     letter-spacing:3px;
+
     line-height:1.6;
   }
 
   .hero-actions{
     justify-content:flex-start;
+
     flex-direction:column;
+
     align-items:flex-start;
   }
 
@@ -954,7 +1003,7 @@ select{
   }
 
 
-  /* MÚSICA */
+  /* SECCIONES */
 
   .section{
     padding:75px 6vw;
@@ -964,54 +1013,28 @@ select{
     padding-top:80px;
   }
 
-  .release-grid{
-    grid-template-columns:1fr 1fr;
-    gap:12px;
-  }
 
+  /* MÚSICA */
+
+  .release-grid,
   .ep-grid{
     grid-template-columns:1fr 1fr;
+
     gap:12px;
-  }
-
-  .section-intro h2{
-    font-size:44px;
-  }
-
-
-  /* VER TODA LA MÚSICA */
-
-  .music-more{
-    margin-top:40px;
-  }
-
-
-  /* DISCOGRAFÍA */
-
-  .discography-heading{
-    flex-direction:column;
-    align-items:flex-start;
-    gap:18px;
-
-    margin-top:75px;
-  }
-
-  .discography-heading .section-kicker{
-    font-size:44px;
   }
 
 
   /* SOBRE MÍ */
 
-  .about-section{
+  .split{
     grid-template-columns:1fr;
   }
 
-  .about-copy{
+  .split-copy{
     padding:80px 6vw;
   }
 
-  .about-photo{
+  .split-photo{
     min-height:390px;
   }
 
@@ -1026,8 +1049,9 @@ select{
     gap:45px;
   }
 
-  .agenda-list{
+  .upcoming{
     border-left:0;
+
     border-top:1px solid rgba(255,255,255,.3);
 
     padding:30px 0 0;
@@ -1036,12 +1060,9 @@ select{
 
   /* CONTACTO */
 
-  .contact-section{
-    padding:75px 6vw;
-  }
-
-  .contact-grid{
+  .contact{
     grid-template-columns:1fr;
+
     gap:35px;
   }
 
@@ -1056,16 +1077,10 @@ select{
     grid-column:1;
   }
 
-  .contact-socials{
-    flex-wrap:wrap;
-    gap:15px 22px;
-    margin-top:55px;
-  }
-
 
   /* FOOTER */
 
-  .site-footer{
+  .footer{
     padding:25px 6vw;
 
     flex-direction:column;
@@ -1074,13 +1089,12 @@ select{
 
     text-align:center;
   }
-
 }
 
 
-/* =========================================================
+/* =========================================
    MOBILE PEQUEÑO
-========================================================= */
+========================================= */
 
 @media(max-width:440px){
 
@@ -1089,24 +1103,15 @@ select{
     grid-template-columns:1fr;
   }
 
-  .artist-name{
+  .hero h1{
     font-size:50px;
-    letter-spacing:-2.5px;
   }
 
-  .section-intro h2{
+  .section-intro h2,
+  .split h2,
+  .agenda h2,
+  .contact h2{
     font-size:40px;
   }
-
-  .about-copy h2,
-  .agenda-content h2,
-  .contact-copy h2{
-    font-size:40px;
-  }
-
-  .discography-heading .section-kicker{
-    font-size:40px;
-  }
-
 }
 ```
