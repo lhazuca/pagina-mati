@@ -65,10 +65,14 @@ select{
   margin-right:auto;
 }
 
+
+/* MDF — MANROPE EXTRA BOLD */
+
 .brand-mark{
-  font-family:"Permanent Marker",cursive;
+  font-family:"Manrope",sans-serif;
   font-size:25px;
-  letter-spacing:-4px;
+  font-weight:800;
+  letter-spacing:-2px;
 }
 
 .nav{
@@ -243,7 +247,9 @@ select{
 }
 
 
-/* TIPOGRAFÍA ACTUAL DEL NOMBRE */
+/* =========================================
+   NOMBRE — MANROPE EXTRA BOLD
+========================================= */
 
 .hero h1{
   font-family:"Manrope",sans-serif;
@@ -260,9 +266,9 @@ select{
 }
 
 .hero h1 span{
-  font-family:"Permanent Marker",cursive;
+  font-family:"Manrope",sans-serif;
 
-  font-weight:400;
+  font-weight:800;
 
   letter-spacing:-5px;
 }
@@ -521,13 +527,8 @@ select{
 
 /* =========================================
    DISCOGRAFÍA
+   MISMO MARGEN QUE MÚSICA
 ========================================= */
-
-/*
-   La discografía ahora sale de la estructura
-   de dos columnas de #musica y ocupa todo
-   el ancho disponible.
-*/
 
 .ep-section{
   grid-column:1 / -1;
@@ -559,9 +560,6 @@ select{
   margin:0;
 }
 
-
-/* LINKS SPOTIFY + YOUTUBE */
-
 .discography-links{
   display:flex;
 
@@ -587,7 +585,6 @@ select{
 .discography-links a:hover{
   opacity:1;
 }
-
 
 .ep-grid{
   display:grid;
@@ -838,14 +835,17 @@ select{
   gap:12px;
 }
 
+
+/* CAMPOS MÁS VISIBLES */
+
 .contact-form input,
 .contact-form select,
 .contact-form textarea{
   width:100%;
 
-  border:1px solid var(--line);
+  border:1px solid rgba(24,26,27,.25);
 
-  background:transparent;
+  background:rgba(255,255,255,.48);
 
   padding:14px 15px;
 
@@ -853,7 +853,23 @@ select{
 
   color:var(--ink);
 
-  border-radius:2px;
+  border-radius:4px;
+
+  transition:
+    border-color .2s ease,
+    background .2s ease,
+    box-shadow .2s ease;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder{
+  color:#77746c;
+
+  opacity:1;
+}
+
+.contact-form select{
+  color:#77746c;
 }
 
 .contact-form textarea,
@@ -869,7 +885,11 @@ select{
 .contact-form input:focus,
 .contact-form textarea:focus,
 .contact-form select:focus{
-  border-color:#555;
+  border-color:#77746c;
+
+  background:#fff;
+
+  box-shadow:0 0 0 2px rgba(24,26,27,.06);
 }
 
 .big-socials{
@@ -1086,8 +1106,7 @@ select{
 
   /* MÚSICA */
 
-  .release-grid,
-  .ep-grid{
+  .release-grid{
     grid-template-columns:1fr 1fr;
 
     gap:12px;
@@ -1098,6 +1117,12 @@ select{
 
   .ep-section{
     padding-top:45px;
+  }
+
+  .ep-grid{
+    grid-template-columns:1fr 1fr;
+
+    gap:12px;
   }
 
   .section-topline{
