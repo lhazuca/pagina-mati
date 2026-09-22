@@ -1,127 +1,97 @@
 ```html
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta
-    name="description"
-    content="Matías Di Franco — Música que nace de la adoración."
-  >
+  <title>Matías Di Franco — Música que nace de la adoración</title>
+  <meta name="description" content="Matías Di Franco — Música, adoración y fe. Canciones que nacen en Su presencia.">
 
-  <meta name="theme-color" content="#111111">
-
-  <title>
-    Matías Di Franco — Música que nace de la adoración
-  </title>
-
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Permanent+Marker&display=swap"
-    rel="stylesheet"
-  >
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Permanent+Marker&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-  <!-- =====================================================
+  <!-- =========================
        HEADER
-  ====================================================== -->
+  ========================== -->
+  <header class="site-header">
 
-  <header class="site-header" id="inicio">
-
-    <a
-      href="#inicio"
-      class="brand brand-logo"
-      aria-label="Matías Di Franco"
-    >
-      MDF
+    <a href="#inicio" class="brand" aria-label="Matías Di Franco">
+      <span class="brand-mark">MDF</span>
     </a>
 
-    <button
-      class="menu-toggle"
-      type="button"
-      aria-label="Abrir menú"
-      aria-expanded="false"
-    >
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-
-    <nav class="main-nav">
-
+    <nav class="nav" id="mainNav">
       <a href="#inicio">Inicio</a>
       <a href="#musica">Música</a>
       <a href="#sobre-mi">Sobre mí</a>
       <a href="#agenda">Agenda</a>
       <a href="#contacto">Contacto</a>
-
     </nav>
 
+    <!-- Redes del hero: se mantienen como en la versión inicial -->
     <div class="social-mini">
 
       <a
         href="https://open.spotify.com/intl-es/artist/5ku1ZJrS85p96dRru40U2I?si=ULFduwJeRYiNeaVhulQ0YQ"
         target="_blank"
         rel="noopener"
-        aria-label="Spotify"
-      >
-        Spotify
+        aria-label="Spotify">
+        S
       </a>
 
       <a
         href="https://www.youtube.com/@MatiasDiFranco/videos"
         target="_blank"
         rel="noopener"
-        aria-label="YouTube"
-      >
-        YouTube
+        aria-label="YouTube">
+        Y
       </a>
 
       <a
         href="https://www.instagram.com/mati_difranco/"
         target="_blank"
         rel="noopener"
-        aria-label="Instagram"
-      >
-        Instagram
+        aria-label="Instagram">
+        I
       </a>
 
       <a
         href="https://www.tiktok.com/@matidifranco"
         target="_blank"
         rel="noopener"
-        aria-label="TikTok"
-      >
-        TikTok
+        aria-label="TikTok">
+        T
       </a>
 
     </div>
 
+    <button
+      class="menu-toggle"
+      id="menuToggle"
+      aria-label="Abrir menú">
+      ☰
+    </button>
+
   </header>
 
 
-  <!-- =====================================================
+  <!-- =========================
        HERO
-  ====================================================== -->
+  ========================== -->
+  <main id="inicio">
 
-  <main>
-
-    <section class="hero" id="hero">
+    <section class="hero">
 
       <div
         class="hero-photo photo-placeholder"
-        data-photo="hero.jpg"
-        aria-label="Foto principal de Matías Di Franco"
-      >
-        <span>Reemplazar por hero.jpg</span>
+        data-photo="hero.jpg">
       </div>
 
       <div class="hero-overlay"></div>
@@ -132,11 +102,12 @@
           MÚSICA • ADORACIÓN • FE
         </p>
 
-        <h1 class="artist-name">
-          MATÍAS DI FRANCO
+        <h1>
+          MATÍAS<br>
+          <span>DI FRANCO</span>
         </h1>
 
-        <p class="hero-tagline">
+        <p class="tagline">
           Música que nace de la adoración.
         </p>
 
@@ -154,255 +125,140 @@
 
       </div>
 
+      <div class="scroll-note">
+        SCROLL ↓
+      </div>
+
     </section>
 
 
-    <!-- =====================================================
+    <!-- =========================
          MÚSICA
-    ====================================================== -->
+    ========================== -->
+    <section class="section light" id="musica">
 
-    <section class="section music-section" id="musica">
+      <div class="section-intro">
 
-      <div class="section-inner">
+        <p class="eyebrow dark">
+          MÚSICA
+        </p>
 
-        <div class="section-intro">
+        <h2>
+          Canciones que nacen en Su presencia.
+        </h2>
 
-          <p class="section-kicker">
-            MÚSICA
-          </p>
+        <p>
+          Canciones y proyectos que cuentan lo que Dios viene haciendo
+          y que buscan llevar Su presencia a cada lugar.
+        </p>
 
-          <h2>
-            Canciones que nacen en Su presencia.
-          </h2>
+        <a
+          href="https://youtube.com/playlist?list=PLrJWQtn--FORKzC6skpFKlKIC1Fgg08E-&si=hstaicbVoYAXZw29"
+          target="_blank"
+          rel="noopener"
+          class="text-link">
+          VER TODA LA MÚSICA →
+        </a>
 
-          <p class="section-description">
-            Canciones y proyectos que cuentan lo que Dios viene haciendo
-            y que buscan llevar Su presencia a cada lugar.
-          </p>
-
-        </div>
-
-
-        <!-- SENCILLOS -->
-
-        <div class="release-grid" id="lanzamientos">
+      </div>
 
 
-          <!-- TU VIDA -->
+      <div class="music-content">
 
+        <!-- SINGLES -->
+        <div class="release-grid">
+
+          <!-- Tu Vida -->
           <article class="release-card">
 
-            <div
+            <a
+              href="https://open.spotify.com/intl-es/album/4cHsMam2N1JVeoEkoeEHEX?si=tBRI3ObTRCuGe12h8w-4hQ"
+              target="_blank"
+              rel="noopener"
               class="release-image photo-placeholder"
               data-photo="tu-vida.jpg"
-              aria-label="Portada Tu Vida"
-            >
-              <span></span>
-            </div>
+              aria-label="Escuchar Tu Vida">
+            </a>
 
-            <div class="release-info">
+            <h3>Tu Vida</h3>
+            <p>Single · 2026</p>
 
-              <h3>
-                Tu Vida
-              </h3>
-
-              <p>
-                Single · 2026
-              </p>
-
-              <div class="platform-links">
-
-                <a
-                  href="https://open.spotify.com/intl-es/album/4cHsMam2N1JVeoEkoeEHEX?si=tBRI3ObTRCuGe12h8w-4hQ"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  Spotify
-                </a>
-
-                <a
-                  href="https://music.apple.com/us/album/tu-vida-live-single/6800791732"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  Apple Music
-                </a>
-
-                <a
-                  href="https://www.youtube.com/watch?v=yKXQZbf1UQ8"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  YouTube
-                </a>
-
-              </div>
-
+            <div class="platforms">
+              <a href="https://open.spotify.com/intl-es/album/4cHsMam2N1JVeoEkoeEHEX?si=tBRI3ObTRCuGe12h8w-4hQ" target="_blank" rel="noopener">Spotify</a>
+              <a href="https://music.apple.com/us/album/tu-vida-live-single/6800791732" target="_blank" rel="noopener">Apple Music</a>
+              <a href="https://www.youtube.com/watch?v=yKXQZbf1UQ8" target="_blank" rel="noopener">YouTube</a>
             </div>
 
           </article>
 
 
-          <!-- UNA COSA TE PIDO -->
-
+          <!-- Una Cosa Te Pido -->
           <article class="release-card">
 
-            <div
+            <a
+              href="https://open.spotify.com/intl-es/track/3ZYlgWybLW8MpjSXJp0BVZ?si=bddb56b636314c24"
+              target="_blank"
+              rel="noopener"
               class="release-image photo-placeholder"
               data-photo="una-cosa.jpg"
-              aria-label="Portada Una Cosa Te Pido"
-            >
-              <span></span>
-            </div>
+              aria-label="Escuchar Una Cosa Te Pido">
+            </a>
 
-            <div class="release-info">
+            <h3>Una Cosa Te Pido</h3>
+            <p>Single · 2026</p>
 
-              <h3>
-                Una Cosa Te Pido
-              </h3>
-
-              <p>
-                Single · 2026
-              </p>
-
-              <div class="platform-links">
-
-                <a
-                  href="https://open.spotify.com/intl-es/track/3ZYlgWybLW8MpjSXJp0BVZ?si=bddb56b636314c24"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  Spotify
-                </a>
-
-                <a
-                  href="https://music.apple.com/us/song/una-cosa-te-pido-live/1876853602"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  Apple Music
-                </a>
-
-                <a
-                  href="https://youtu.be/WKEL4KPCYlk?si=NF8btIXtIXCkwuCl"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  YouTube
-                </a>
-
-              </div>
-
+            <div class="platforms">
+              <a href="https://open.spotify.com/intl-es/track/3ZYlgWybLW8MpjSXJp0BVZ?si=bddb56b636314c24" target="_blank" rel="noopener">Spotify</a>
+              <a href="https://music.apple.com/us/song/una-cosa-te-pido-live/1876853602" target="_blank" rel="noopener">Apple Music</a>
+              <a href="https://youtu.be/WKEL4KPCYlk?si=NF8btIXtIXCkwuCl" target="_blank" rel="noopener">YouTube</a>
             </div>
 
           </article>
 
 
-          <!-- ME PERDONÓ -->
-
+          <!-- Me Perdonó -->
           <article class="release-card">
 
-            <div
+            <a
+              href="https://open.spotify.com/intl-es/track/3wyv6JZSNgFIO16wjSb5xN?si=0507a21235774b76"
+              target="_blank"
+              rel="noopener"
               class="release-image photo-placeholder"
               data-photo="me-perdono.jpg"
-              aria-label="Portada Me Perdonó"
-            >
-              <span></span>
-            </div>
+              aria-label="Escuchar Me Perdonó">
+            </a>
 
-            <div class="release-info">
+            <h3>Me Perdonó</h3>
+            <p>Single · 2024</p>
 
-              <h3>
-                Me Perdonó
-              </h3>
-
-              <p>
-                Single · 2024
-              </p>
-
-              <div class="platform-links">
-
-                <a
-                  href="https://open.spotify.com/intl-es/track/3wyv6JZSNgFIO16wjSb5xN?si=0507a21235774b76"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  Spotify
-                </a>
-
-                <a
-                  href="https://music.apple.com/us/song/me-perdon%C3%B3/1845395699"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  Apple Music
-                </a>
-
-                <a
-                  href="https://youtu.be/vENB-kNXGzw?si=IDIS5qFV2dKSm0TX"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  YouTube
-                </a>
-
-              </div>
-
+            <div class="platforms">
+              <a href="https://open.spotify.com/intl-es/track/3wyv6JZSNgFIO16wjSb5xN?si=0507a21235774b76" target="_blank" rel="noopener">Spotify</a>
+              <a href="https://music.apple.com/us/song/me-perdon%C3%B3/1845395699" target="_blank" rel="noopener">Apple Music</a>
+              <a href="https://youtu.be/vENB-kNXGzw?si=IDIS5qFV2dKSm0TX" target="_blank" rel="noopener">YouTube</a>
             </div>
 
           </article>
 
 
-          <!-- EN ADORACIÓN -->
-
+          <!-- En adoración -->
           <article class="release-card">
 
-            <div
+            <a
+              href="https://open.spotify.com/intl-es/track/3t7Er2NdY4SDW2esc6lFjZ?si=2c477cd33b684ba2"
+              target="_blank"
+              rel="noopener"
               class="release-image photo-placeholder"
               data-photo="en-adoracion.jpg"
-              aria-label="Portada En adoración"
-            >
-              <span></span>
-            </div>
+              aria-label="Escuchar En adoración">
+            </a>
 
-            <div class="release-info">
+            <h3>En adoración</h3>
+            <p>Single · 2023</p>
 
-              <h3>
-                En adoración
-              </h3>
-
-              <p>
-                Single · 2023
-              </p>
-
-              <div class="platform-links">
-
-                <a
-                  href="https://open.spotify.com/intl-es/track/3t7Er2NdY4SDW2esc6lFjZ?si=2c477cd33b684ba2"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  Spotify
-                </a>
-
-                <a
-                  href="https://music.apple.com/us/song/en-adoraci%C3%B3n/1845703575"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  Apple Music
-                </a>
-
-                <a
-                  href="https://youtu.be/cItvM_ECMvo?si=all23N-tK7dPgkZp"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  YouTube
-                </a>
-
-              </div>
-
+            <div class="platforms">
+              <a href="https://open.spotify.com/intl-es/track/3t7Er2NdY4SDW2esc6lFjZ?si=2c477cd33b684ba2" target="_blank" rel="noopener">Spotify</a>
+              <a href="https://music.apple.com/us/song/en-adoraci%C3%B3n/1845703575" target="_blank" rel="noopener">Apple Music</a>
+              <a href="https://youtu.be/cItvM_ECMvo?si=all23N-tK7dPgkZp" target="_blank" rel="noopener">YouTube</a>
             </div>
 
           </article>
@@ -410,205 +266,118 @@
         </div>
 
 
-        <!-- VER TODA LA MÚSICA -->
+        <!-- DISCOGRAFÍA -->
+        <div class="ep-section">
 
-        <div class="music-more">
+          <div class="section-topline">
 
-          <a
-            href="https://youtube.com/playlist?list=PLrJWQtn--FORKzC6skpFKlKIC1Fgg08E-&si=hstaicbVoYAXZw29"
-            target="_blank"
-            rel="noopener"
-            class="music-more-link"
-          >
-            VER TODA LA MÚSICA
-          </a>
+            <h2>
+              Discografía
+            </h2>
 
-        </div>
+            <a
+              href="https://youtube.com/playlist?list=PLrJWQtn--FORKzC6skpFKlKIC1Fgg08E-&si=hstaicbVoYAXZw29"
+              target="_blank"
+              rel="noopener"
+              class="text-link">
+              Ver discografía completa →
+            </a>
 
-
-        <!-- =================================================
-             DISCOGRAFÍA
-        ================================================== -->
-
-        <div class="section-topline discography-heading">
-
-          <p class="section-kicker">
-            DISCOGRAFÍA
-          </p>
-
-          <a
-            href="https://youtube.com/playlist?list=PLrJWQtn--FORKzC6skpFKlKIC1Fgg08E-&si=hstaicbVoYAXZw29"
-            target="_blank"
-            rel="noopener"
-            class="discography-link"
-          >
-            Ver discografía completa →
-          </a>
-
-        </div>
+          </div>
 
 
-        <div class="ep-grid">
+          <div class="ep-grid">
+
+            <!-- EP 01 -->
+            <a
+              href="https://youtube.com/playlist?list=PLrJWQtn--FOSK3OJcVXzoSiyZmE6JYz4l&si=B3k0JWpwztc02jy3"
+              target="_blank"
+              rel="noopener"
+              class="ep-card">
+
+              <div
+                class="ep-cover photo-placeholder"
+                data-photo="ep-01.jpg">
+              </div>
+
+              <h3>Inúndame</h3>
+              <p>EP 01 · 5 canciones</p>
+
+            </a>
 
 
-          <!-- EP 01 -->
+            <!-- EP 02 -->
+            <a
+              href="https://youtube.com/playlist?list=PLrJWQtn--FOSlUcNYYkXgp8Qy9BtfJdF1&si=W8HHDwi0qPKrCV3_"
+              target="_blank"
+              rel="noopener"
+              class="ep-card">
 
-          <a
-            href="https://youtube.com/playlist?list=PLrJWQtn--FOSK3OJcVXzoSiyZmE6JYz4l&si=B3k0JWpwztc02jy3"
-            class="ep-card"
-            target="_blank"
-            rel="noopener"
-          >
+              <div
+                class="ep-cover photo-placeholder"
+                data-photo="ep-02.jpg">
+              </div>
 
-            <div
-              class="ep-image photo-placeholder"
-              data-photo="ep-01.jpg"
-              aria-label="Portada EP Inúndame"
-            >
-              <span></span>
-            </div>
+              <h3>Profundo Mar</h3>
+              <p>EP 02 · 5 canciones</p>
 
-            <div class="ep-info">
-
-              <h3>
-                Inúndame
-              </h3>
-
-              <p>
-                EP 01 · 5 canciones
-              </p>
-
-            </div>
-
-          </a>
+            </a>
 
 
-          <!-- EP 02 -->
+            <!-- EP 03 -->
+            <a
+              href="https://youtube.com/playlist?list=PLrJWQtn--FORq63fu-aXR4e2GtafRsR43&si=owZX0Npeyfdm9zLe"
+              target="_blank"
+              rel="noopener"
+              class="ep-card">
 
-          <a
-            href="https://youtube.com/playlist?list=PLrJWQtn--FOSlUcNYYkXgp8Qy9BtfJdF1&si=W8HHDwi0qPKrCV3_"
-            class="ep-card"
-            target="_blank"
-            rel="noopener"
-          >
+              <div
+                class="ep-cover photo-placeholder"
+                data-photo="ep-03.jpg">
+              </div>
 
-            <div
-              class="ep-image photo-placeholder"
-              data-photo="ep-02.jpg"
-              aria-label="Portada EP Profundo Mar"
-            >
-              <span></span>
-            </div>
+              <h3>Me Perdonó</h3>
+              <p>EP 03 · 5 canciones</p>
 
-            <div class="ep-info">
-
-              <h3>
-                Profundo Mar
-              </h3>
-
-              <p>
-                EP 02 · 5 canciones
-              </p>
-
-            </div>
-
-          </a>
+            </a>
 
 
-          <!-- EP 03 -->
+            <!-- EP 04 -->
+            <a
+              href="https://youtube.com/playlist?list=PLrJWQtn--FOTw1dAc4LjnZoXV_21_CxoB&si=rZMVbTYQ_rJal-EO"
+              target="_blank"
+              rel="noopener"
+              class="ep-card">
 
-          <a
-            href="https://youtube.com/playlist?list=PLrJWQtn--FORq63fu-aXR4e2GtafRsR43&si=owZX0Npeyfdm9zLe"
-            class="ep-card"
-            target="_blank"
-            rel="noopener"
-          >
+              <div
+                class="ep-cover photo-placeholder"
+                data-photo="ep-04.jpg">
+              </div>
 
-            <div
-              class="ep-image photo-placeholder"
-              data-photo="ep-03.jpg"
-              aria-label="Portada EP Me Perdonó"
-            >
-              <span></span>
-            </div>
+              <h3>Sesiones Acústicas</h3>
+              <p>EP 04</p>
 
-            <div class="ep-info">
-
-              <h3>
-                Me Perdonó
-              </h3>
-
-              <p>
-                EP 03 · 5 canciones
-              </p>
-
-            </div>
-
-          </a>
+            </a>
 
 
-          <!-- EP 04 -->
+            <!-- EP 05 -->
+            <a
+              href="https://youtube.com/playlist?list=PLrJWQtn--FOQKo4rtbibFVPQUpAzWnsdb&si=ngBlUSuyAH3Tdug8"
+              target="_blank"
+              rel="noopener"
+              class="ep-card">
 
-          <a
-            href="https://youtube.com/playlist?list=PLrJWQtn--FOTw1dAc4LjnZoXV_21_CxoB&si=rZMVbTYQ_rJal-EO"
-            class="ep-card"
-            target="_blank"
-            rel="noopener"
-          >
+              <div
+                class="ep-cover photo-placeholder"
+                data-photo="ep-05.jpg">
+              </div>
 
-            <div
-              class="ep-image photo-placeholder"
-              data-photo="ep-04.jpg"
-              aria-label="Portada EP Sesiones Acústicas"
-            >
-              <span></span>
-            </div>
+              <h3>Noche de Adoración</h3>
+              <p>EP 05 · En Vivo</p>
 
-            <div class="ep-info">
+            </a>
 
-              <h3>
-                Sesiones Acústicas
-              </h3>
-
-              <p>
-                EP 04
-              </p>
-
-            </div>
-
-          </a>
-
-
-          <!-- EP 05 -->
-
-          <a
-            href="https://youtube.com/playlist?list=PLrJWQtn--FOQKo4rtbibFVPQUpAzWnsdb&si=ngBlUSuyAH3Tdug8"
-            class="ep-card"
-            target="_blank"
-            rel="noopener"
-          >
-
-            <div
-              class="ep-image photo-placeholder"
-              data-photo="ep-05.jpg"
-              aria-label="Portada EP Noche de Adoración"
-            >
-              <span></span>
-            </div>
-
-            <div class="ep-info">
-
-              <h3>
-                Noche de Adoración
-              </h3>
-
-              <p>
-                EP 05 · En Vivo
-              </p>
-
-            </div>
-
-          </a>
+          </div>
 
         </div>
 
@@ -617,112 +386,103 @@
     </section>
 
 
-    <!-- =====================================================
+    <!-- =========================
          SOBRE MÍ
-         MANTENIDA SIN CAMBIOS
-    ====================================================== -->
+    ========================== -->
+    <section class="split" id="sobre-mi">
 
-    <section class="about-section" id="sobre-mi">
+      <div class="split-copy">
 
-      <div class="about-content">
+        <p class="eyebrow dark">
+          SOBRE MÍ
+        </p>
 
-        <div class="about-copy">
+        <h2>
+          Soy Matías Di Franco
+        </h2>
 
-          <p class="section-kicker">
-            SOBRE MÍ
-          </p>
+        <p>
+          Músico, compositor y ministro de adoración.
+          Mi vida y mi música tienen un mismo propósito:
+          exaltar a Jesús y llevar esperanza a través de lo que Él hace en mí.
+        </p>
 
-          <h2>
-            Soy Matías Di Franco
-          </h2>
+        <p>
+          Creo en el poder de la adoración, en la presencia de Dios
+          y en el llamado a una generación que no solo cante,
+          sino que viva para Él.
+        </p>
 
-          <p>
-            Músico, compositor y ministro de adoración. Mi vida y mi música
-            tienen un mismo propósito: exaltar a Jesús y llevar esperanza
-            a través de lo que Él hace en mí.
-          </p>
-
-          <p>
-            Creo en el poder de la adoración, en la presencia de Dios y en
-            el llamado a una generación que no solo cante, sino que viva
-            para Él.
-          </p>
-
-          <a href="#contacto" class="btn btn-light">
-            Conocer más →
-          </a>
-
-        </div>
-
-        <div
-          class="about-photo photo-placeholder"
-          data-photo="sobre-mi.jpg"
-          aria-label="Foto de Matías Di Franco"
-        >
-          <span>Reemplazar por sobre-mi.jpg</span>
-        </div>
+        <a href="#contacto" class="btn btn-dark">
+          Conocer más →
+        </a>
 
       </div>
 
-    </section>
-
-
-    <!-- =====================================================
-         AGENDA
-         MANTENIDA SIN CAMBIOS
-    ====================================================== -->
-
-    <section class="agenda-section" id="agenda">
 
       <div
-        class="agenda-background photo-placeholder"
-        data-photo="agenda.jpg"
-        aria-label="Foto de agenda"
-      >
-        <span>Reemplazar por agenda.jpg</span>
+        class="split-photo photo-placeholder"
+        data-photo="sobre-mi.jpg">
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         AGENDA
+    ========================== -->
+    <section class="agenda" id="agenda">
+
+      <div
+        class="agenda-bg photo-placeholder"
+        data-photo="agenda.jpg">
       </div>
 
       <div class="agenda-overlay"></div>
 
       <div class="agenda-content">
 
-        <p class="section-kicker">
-          AGENDA
-        </p>
+        <div>
 
-        <h2>
-          Nos vemos pronto
-        </h2>
+          <p class="eyebrow">
+            AGENDA
+          </p>
 
-        <p>
-          Seguime en Instagram para conocer próximas fechas,
-          eventos y nuevos lanzamientos.
-        </p>
+          <h2>
+            Nos vemos pronto
+          </h2>
 
-        <a
-          href="https://www.instagram.com/mati_difranco/"
-          target="_blank"
-          rel="noopener"
-          class="btn btn-light"
-        >
-          Seguir en Instagram
-        </a>
+          <p>
+            Seguime en Instagram para conocer las próximas fechas,
+            presentaciones y novedades.
+          </p>
 
-        <div class="agenda-list">
+          <a
+            href="https://www.instagram.com/mati_difranco/"
+            target="_blank"
+            rel="noopener"
+            class="btn btn-outline">
+            Seguir en Instagram
+          </a>
 
-          <div class="agenda-item">
-            <span>Noche de Adoración</span>
-            <strong>Próximamente</strong>
+        </div>
+
+
+        <div class="upcoming">
+
+          <div class="date-item">
+            <strong>Noche de Adoración</strong>
+            <span>Próximamente</span>
           </div>
 
-          <div class="agenda-item">
-            <span>Presentaciones</span>
-            <strong>Próximamente</strong>
+          <div class="date-item">
+            <strong>Presentaciones</strong>
+            <span>Próximamente</span>
           </div>
 
-          <div class="agenda-item">
-            <span>Nuevo lanzamiento</span>
-            <strong>Próximamente</strong>
+          <div class="date-item">
+            <strong>Nuevo lanzamiento</strong>
+            <span>Próximamente</span>
           </div>
 
         </div>
@@ -732,163 +492,122 @@
     </section>
 
 
-    <!-- =====================================================
+    <!-- =========================
          CONTACTO
-         MANTENIDA SIN CAMBIOS
-    ====================================================== -->
+    ========================== -->
+    <section class="section light contact" id="contacto">
 
-    <section class="contact-section" id="contacto">
+      <div class="contact-copy">
 
-      <div class="section-inner">
+        <p class="eyebrow dark">
+          CONTACTO
+        </p>
 
-        <div class="contact-grid">
+        <h2>
+          ¿Hacemos algo juntos?
+        </h2>
 
-          <div class="contact-copy">
+        <p>
+          Si querés invitarme a ministrar, trabajar en un proyecto,
+          colaborar o simplemente ponerte en contacto, escribime.
+        </p>
 
-            <p class="section-kicker">
-              CONTACTO
-            </p>
+        <p class="signature">
+          Toda la gloria para Él.
+        </p>
 
-            <h2>
-              ¿Hacemos algo juntos?
-            </h2>
-
-            <p>
-              Si querés invitarme a ministrar, trabajar en un proyecto,
-              colaborar o simplemente ponerte en contacto, escribime.
-            </p>
-
-            <p class="contact-signature">
-              Toda la gloria para Él.
-            </p>
-
-          </div>
+      </div>
 
 
-          <form
-            class="contact-form"
-            action="https://formsubmit.co/TU_EMAIL_AQUI"
-            method="POST"
-          >
+      <form
+        class="contact-form"
+        action="https://formsubmit.co/TU_EMAIL_AQUI"
+        method="POST">
 
-            <input
-              type="hidden"
-              name="_subject"
-              value="Nuevo mensaje desde matiasdifranco.musica.ar"
-            >
+        <input
+          type="hidden"
+          name="_subject"
+          value="Nuevo mensaje desde matiasdifranco.musica.ar">
 
-            <input
-              type="hidden"
-              name="_captcha"
-              value="false"
-            >
+        <input
+          type="hidden"
+          name="_captcha"
+          value="false">
 
-            <label>
-              Nombre
+        <input
+          type="text"
+          name="nombre"
+          placeholder="Nombre"
+          required>
 
-              <input
-                type="text"
-                name="nombre"
-                placeholder="Tu nombre"
-                required
-              >
-            </label>
+        <input
+          type="email"
+          name="email"
+          placeholder="Email"
+          required>
 
-            <label>
-              Email
+        <select name="motivo" required>
+          <option value="" disabled selected>
+            Motivo
+          </option>
+          <option value="Invitación a ministrar">
+            Invitación a ministrar
+          </option>
+          <option value="Proyecto">
+            Proyecto
+          </option>
+          <option value="Colaboración">
+            Colaboración
+          </option>
+          <option value="Otro">
+            Otro
+          </option>
+        </select>
 
-              <input
-                type="email"
-                name="email"
-                placeholder="tu@email.com"
-                required
-              >
-            </label>
+        <textarea
+          name="mensaje"
+          rows="7"
+          placeholder="Mensaje"
+          required></textarea>
 
-            <label>
-              Motivo
+        <button
+          type="submit"
+          class="btn btn-dark">
+          Enviar mensaje
+        </button>
 
-              <select name="motivo" required>
-
-                <option value="">
-                  Seleccionar
-                </option>
-
-                <option value="Invitación">
-                  Invitación
-                </option>
-
-                <option value="Colaboración">
-                  Colaboración
-                </option>
-
-                <option value="Proyecto">
-                  Proyecto
-                </option>
-
-                <option value="Otro">
-                  Otro
-                </option>
-
-              </select>
-
-            </label>
-
-            <label>
-              Mensaje
-
-              <textarea
-                name="mensaje"
-                rows="6"
-                placeholder="Escribí tu mensaje..."
-                required
-              ></textarea>
-
-            </label>
-
-            <button
-              type="submit"
-              class="btn btn-dark"
-            >
-              Enviar mensaje
-            </button>
-
-          </form>
-
-        </div>
+      </form>
 
 
-        <div class="contact-socials">
+      <div class="contact-socials">
+
+        <div class="big-socials">
 
           <a
-            href="https://www.instagram.com/mati_difranco/"
+            href="https://open.spotify.com/intl-es/artist/5ku1ZJrS85p96dRru40U2I?si=ULFduwJeRYiNeaVhulQ0YQ"
             target="_blank"
-            rel="noopener"
-          >
-            Instagram
+            rel="noopener">
+            Spotify
           </a>
 
           <a
             href="https://www.youtube.com/@MatiasDiFranco/videos"
             target="_blank"
-            rel="noopener"
-          >
+            rel="noopener">
             YouTube
           </a>
 
           <a
-            href="https://open.spotify.com/intl-es/artist/5ku1ZJrS85p96dRru40U2I?si=ULFduwJeRYiNeaVhulQ0YQ"
+            href="https://www.instagram.com/mati_difranco/"
             target="_blank"
-            rel="noopener"
-          >
-            Spotify
+            rel="noopener">
+            Instagram
           </a>
 
           <a
             href="https://www.tiktok.com/@matidifranco"
             target="_blank"
-            rel="noopener"
-          >
+            rel="noopener">
             TikTok
           </a>
 
@@ -901,14 +620,13 @@
   </main>
 
 
-  <!-- =====================================================
+  <!-- =========================
        FOOTER
-  ====================================================== -->
+  ========================== -->
+  <footer class="footer">
 
-  <footer class="site-footer">
-
-    <div class="footer-brand">
-      MDF
+    <div>
+      <strong>MDF</strong>
     </div>
 
     <p>
