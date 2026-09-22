@@ -88,9 +88,6 @@ select{
   opacity:1;
 }
 
-
-/* REDES SUPERIORES DEL HERO */
-
 .social-mini{
   display:flex;
   gap:12px;
@@ -118,7 +115,6 @@ select{
   border-color:#fff;
 }
 
-
 .menu-toggle{
   display:none;
 
@@ -131,7 +127,7 @@ select{
 
 
 /* =========================================
-   PLACEHOLDERS / IMÁGENES
+   IMÁGENES
 ========================================= */
 
 .photo-placeholder{
@@ -177,18 +173,6 @@ select{
       #141718 55%,
       #242827
     );
-}
-
-.photo-hint{
-  position:absolute;
-  left:14px;
-  bottom:12px;
-
-  font-size:9px;
-  letter-spacing:1.4px;
-  text-transform:uppercase;
-
-  opacity:.55;
 }
 
 
@@ -258,10 +242,14 @@ select{
   color:#77746c;
 }
 
+
+/* TIPOGRAFÍA ACTUAL DEL NOMBRE */
+
 .hero h1{
   font-family:"Manrope",sans-serif;
 
   font-size:clamp(54px,7vw,105px);
+
   line-height:.88;
 
   margin:0;
@@ -273,13 +261,17 @@ select{
 
 .hero h1 span{
   font-family:"Permanent Marker",cursive;
+
   font-weight:400;
+
   letter-spacing:-5px;
 }
 
 .tagline{
   font-size:13px;
+
   letter-spacing:7px;
+
   text-transform:uppercase;
 
   margin:28px 0 30px;
@@ -287,9 +279,11 @@ select{
 
 .hero-actions{
   display:flex;
+
   justify-content:flex-end;
 
   gap:12px;
+
   flex-wrap:wrap;
 }
 
@@ -304,12 +298,15 @@ select{
   padding:0 22px;
 
   border-radius:28px;
+
   border:1px solid transparent;
 
   text-transform:uppercase;
+
   letter-spacing:1.2px;
 
   font-size:10px;
+
   font-weight:700;
 
   transition:.25s;
@@ -356,6 +353,7 @@ select{
   left:5vw;
 
   font-size:9px;
+
   letter-spacing:3px;
 
   opacity:.6;
@@ -363,7 +361,7 @@ select{
 
 
 /* =========================================
-   SECCIONES GENERALES
+   SECCIONES
 ========================================= */
 
 .section{
@@ -390,6 +388,7 @@ select{
   font-family:"Manrope",sans-serif;
 
   font-size:clamp(36px,4vw,58px);
+
   line-height:1.02;
 
   letter-spacing:-2.5px;
@@ -402,6 +401,7 @@ select{
 .agenda-content>div>p:not(.eyebrow),
 .contact-copy>p{
   color:var(--muted);
+
   font-size:14px;
 }
 
@@ -411,8 +411,11 @@ select{
   margin-top:25px;
 
   font-size:10px;
+
   text-transform:uppercase;
+
   letter-spacing:1.8px;
+
   font-weight:700;
 }
 
@@ -423,11 +426,13 @@ select{
 
 #musica{
   display:grid;
+
   grid-template-columns:280px 1fr;
 
   gap:60px;
 
   max-width:1440px;
+
   margin:auto;
 }
 
@@ -465,6 +470,7 @@ select{
 
 .release-card h3{
   font-size:15px;
+
   margin:12px 0 3px;
 }
 
@@ -473,6 +479,7 @@ select{
   font-size:10px;
 
   text-transform:uppercase;
+
   letter-spacing:1.5px;
 
   color:#8a8880;
@@ -482,6 +489,7 @@ select{
 
 .platforms{
   display:flex;
+
   gap:7px;
 
   margin-top:12px;
@@ -493,6 +501,7 @@ select{
   font-size:8px;
 
   text-transform:uppercase;
+
   letter-spacing:.7px;
 
   border:1px solid var(--line);
@@ -514,7 +523,17 @@ select{
    DISCOGRAFÍA
 ========================================= */
 
+/*
+   La discografía ahora sale de la estructura
+   de dos columnas de #musica y ocupa todo
+   el ancho disponible.
+*/
+
 .ep-section{
+  grid-column:1 / -1;
+
+  width:100%;
+
   padding-top:55px;
 }
 
@@ -522,6 +541,7 @@ select{
   display:flex;
 
   justify-content:space-between;
+
   align-items:center;
 
   margin-bottom:20px;
@@ -531,6 +551,7 @@ select{
   font-family:"Manrope",sans-serif;
 
   font-size:clamp(36px,4vw,58px);
+
   line-height:1.02;
 
   letter-spacing:-2.5px;
@@ -538,12 +559,44 @@ select{
   margin:0;
 }
 
+
+/* LINKS SPOTIFY + YOUTUBE */
+
+.discography-links{
+  display:flex;
+
+  align-items:center;
+
+  gap:22px;
+}
+
+.discography-links a{
+  font-size:10px;
+
+  text-transform:uppercase;
+
+  letter-spacing:1.5px;
+
+  font-weight:700;
+
+  opacity:.75;
+
+  transition:.2s ease;
+}
+
+.discography-links a:hover{
+  opacity:1;
+}
+
+
 .ep-grid{
   display:grid;
 
-  grid-template-columns:repeat(4,1fr);
+  grid-template-columns:repeat(5,1fr);
 
   gap:16px;
+
+  width:100%;
 }
 
 .ep-card{
@@ -573,18 +626,19 @@ select{
 
 .ep-cover span{
   font-size:12px;
+
   letter-spacing:4px;
 }
 
 .ep-card h3{
   font-size:14px;
+
   margin:10px 0 2px;
 }
 
 
 /* =========================================
    SOBRE MÍ
-   VERSIÓN ORIGINAL
 ========================================= */
 
 .split{
@@ -642,13 +696,13 @@ select{
     );
 
   background-size:cover;
+
   background-position:center;
 }
 
 
 /* =========================================
    AGENDA
-   VERSIÓN ORIGINAL
 ========================================= */
 
 .agenda{
@@ -663,6 +717,7 @@ select{
 
 .agenda-bg{
   position:absolute;
+
   inset:0;
 
   background-image:
@@ -674,11 +729,13 @@ select{
     );
 
   background-size:cover;
+
   background-position:center;
 }
 
 .agenda-overlay{
   position:absolute;
+
   inset:0;
 
   background:rgba(0,0,0,.43);
@@ -686,6 +743,7 @@ select{
 
 .agenda-content{
   position:relative;
+
   z-index:2;
 
   min-height:530px;
@@ -707,11 +765,13 @@ select{
 
 .agenda-content h2{
   color:#fff;
+
   margin-bottom:16px;
 }
 
 .agenda-content>div>p:not(.eyebrow){
   color:rgba(255,255,255,.7);
+
   font-size:14px;
 }
 
@@ -750,7 +810,6 @@ select{
 
 /* =========================================
    CONTACTO
-   VERSIÓN ORIGINAL
 ========================================= */
 
 .contact{
@@ -883,6 +942,15 @@ select{
    TABLET
 ========================================= */
 
+@media(max-width:1100px){
+
+  .ep-grid{
+    grid-template-columns:repeat(3,1fr);
+  }
+
+}
+
+
 @media(max-width:950px){
 
   .nav{
@@ -918,6 +986,7 @@ select{
   .contact-socials{
     grid-column:1/-1;
   }
+
 }
 
 
@@ -975,6 +1044,7 @@ select{
 
   .hero h1{
     font-size:58px;
+
     letter-spacing:-3px;
   }
 
@@ -1021,6 +1091,25 @@ select{
     grid-template-columns:1fr 1fr;
 
     gap:12px;
+  }
+
+
+  /* DISCOGRAFÍA */
+
+  .ep-section{
+    padding-top:45px;
+  }
+
+  .section-topline{
+    align-items:flex-start;
+
+    gap:20px;
+  }
+
+  .discography-links{
+    gap:14px;
+
+    flex-shrink:0;
   }
 
 
@@ -1089,6 +1178,7 @@ select{
 
     text-align:center;
   }
+
 }
 
 
@@ -1113,5 +1203,14 @@ select{
   .contact h2{
     font-size:40px;
   }
+
+  .section-topline{
+    flex-direction:column;
+  }
+
+  .discography-links{
+    align-self:flex-start;
+  }
+
 }
 ```
