@@ -14,11 +14,18 @@ document.querySelectorAll('.nav a').forEach(link => {
 document.querySelectorAll('.photo-placeholder').forEach(el => {
   const filename = el.dataset.photo;
   if (!filename) return;
+
   const img = new Image();
+
   img.onload = () => {
     el.style.backgroundImage = `url("assets/${filename}")`;
+
     const hint = el.querySelector('.photo-hint');
-    if (hint) hint.style.display = 'none';
+
+    if (hint) {
+      hint.style.display = 'none';
+    }
   };
+
   img.src = `assets/${filename}`;
 });
