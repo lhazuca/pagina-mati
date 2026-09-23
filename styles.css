@@ -1,4 +1,3 @@
-```css
 :root{
   --black:#111314;
   --black2:#17191a;
@@ -38,6 +37,11 @@ select{
   font:inherit;
 }
 
+
+/* =========================================
+   HEADER
+========================================= */
+
 .site-header{
   position:absolute;
   z-index:20;
@@ -45,9 +49,12 @@ select{
   left:0;
   right:0;
   height:82px;
+
   display:flex;
   align-items:center;
+
   padding:0 5vw;
+
   color:#fff;
 }
 
@@ -56,6 +63,9 @@ select{
   align-items:center;
   margin-right:auto;
 }
+
+
+/* MDF — MANROPE EXTRA BOLD */
 
 .brand-mark{
   font-family:"Manrope",sans-serif;
@@ -67,6 +77,7 @@ select{
 .nav{
   display:flex;
   gap:30px;
+
   font-size:10px;
   letter-spacing:2px;
   text-transform:uppercase;
@@ -89,11 +100,15 @@ select{
 .social-mini a{
   width:27px;
   height:27px;
+
   border:1px solid rgba(255,255,255,.45);
   border-radius:50%;
+
   display:grid;
   place-items:center;
+
   font-size:10px;
+
   transition:.2s ease;
 }
 
@@ -105,11 +120,18 @@ select{
 
 .menu-toggle{
   display:none;
+
   background:none;
   border:0;
+
   color:#fff;
   font-size:24px;
 }
+
+
+/* =========================================
+   IMÁGENES
+========================================= */
 
 .photo-placeholder{
   background:
@@ -129,8 +151,10 @@ select{
       #111314 58%,
       #262827
     );
+
   background-size:cover;
   background-position:center;
+
   position:relative;
 }
 
@@ -154,12 +178,21 @@ select{
     );
 }
 
+
+/* =========================================
+   HERO
+========================================= */
+
 .hero{
   min-height:760px;
+
   position:relative;
+
   display:flex;
   align-items:center;
+
   overflow:hidden;
+
   background:#1a1d1e;
   color:#fff;
 }
@@ -172,6 +205,7 @@ select{
 .hero-overlay{
   position:absolute;
   inset:0;
+
   background:
     linear-gradient(
       90deg,
@@ -189,8 +223,11 @@ select{
 .hero-content{
   position:relative;
   z-index:2;
+
   width:min(1120px,90%);
+
   margin:95px auto 0;
+
   text-align:right;
 }
 
@@ -198,7 +235,9 @@ select{
   font-size:10px;
   letter-spacing:3px;
   font-weight:700;
+
   margin:0 0 18px;
+
   text-transform:uppercase;
 }
 
@@ -206,47 +245,75 @@ select{
   color:#77746c;
 }
 
+
+/* =========================================
+   NOMBRE — MANROPE EXTRA BOLD
+========================================= */
+
 .hero h1{
   font-family:"Manrope",sans-serif;
+
   font-size:clamp(54px,7vw,105px);
+
   line-height:.88;
+
   margin:0;
+
   font-weight:800;
+
   letter-spacing:-5px;
 }
 
 .hero h1 span{
   font-family:"Manrope",sans-serif;
+
   font-weight:800;
+
   letter-spacing:-5px;
 }
 
 .tagline{
   font-size:13px;
+
   letter-spacing:7px;
+
   text-transform:uppercase;
+
   margin:28px 0 30px;
 }
 
 .hero-actions{
   display:flex;
+
   justify-content:flex-end;
+
   gap:12px;
+
   flex-wrap:wrap;
 }
 
 .btn{
   display:inline-flex;
+
   justify-content:center;
   align-items:center;
+
   min-height:46px;
+
   padding:0 22px;
+
   border-radius:28px;
+
   border:1px solid transparent;
+
   text-transform:uppercase;
+
   letter-spacing:1.2px;
+
   font-size:10px;
+
   font-weight:700;
+
   transition:.25s;
 }
 
@@ -272,8 +339,11 @@ select{
 .btn-dark{
   background:#17191a;
   color:#fff;
+
   width:100%;
+
   border:0;
+
   cursor:pointer;
 }
 
@@ -283,12 +353,21 @@ select{
 
 .scroll-note{
   position:absolute;
+
   bottom:28px;
   left:5vw;
+
   font-size:9px;
+
   letter-spacing:3px;
+
   opacity:.6;
 }
+
+
+/* =========================================
+   SECCIONES
+========================================= */
 
 .section{
   padding:110px 5vw;
@@ -312,9 +391,13 @@ select{
 .agenda h2,
 .contact h2{
   font-family:"Manrope",sans-serif;
+
   font-size:clamp(36px,4vw,58px);
+
   line-height:1.02;
+
   letter-spacing:-2.5px;
+
   margin:0 0 22px;
 }
 
@@ -323,23 +406,38 @@ select{
 .agenda-content>div>p:not(.eyebrow),
 .contact-copy>p{
   color:var(--muted);
+
   font-size:14px;
 }
 
 .text-link{
   display:inline-block;
+
   margin-top:25px;
+
   font-size:10px;
+
   text-transform:uppercase;
+
   letter-spacing:1.8px;
+
   font-weight:700;
 }
 
+
+/* =========================================
+   MÚSICA
+========================================= */
+
 #musica{
   display:grid;
+
   grid-template-columns:280px 1fr;
+
   gap:60px;
+
   max-width:1440px;
+
   margin:auto;
 }
 
@@ -349,7 +447,9 @@ select{
 
 .release-grid{
   display:grid;
+
   grid-template-columns:repeat(4,1fr);
+
   gap:16px;
 }
 
@@ -359,9 +459,13 @@ select{
 
 .release-image{
   display:block;
+
   width:100%;
+
   aspect-ratio:1/1;
+
   overflow:hidden;
+
   transition:.25s ease;
 }
 
@@ -371,32 +475,46 @@ select{
 
 .release-card h3{
   font-size:15px;
+
   margin:12px 0 3px;
 }
 
 .release-card>p,
 .ep-card>p{
   font-size:10px;
+
   text-transform:uppercase;
+
   letter-spacing:1.5px;
+
   color:#8a8880;
+
   margin:0;
 }
 
 .platforms{
   display:flex;
+
   gap:7px;
+
   margin-top:12px;
+
   flex-wrap:wrap;
 }
 
 .platforms a{
   font-size:8px;
+
   text-transform:uppercase;
+
   letter-spacing:.7px;
+
   border:1px solid var(--line);
+
   padding:5px 7px;
+
   border-radius:12px;
+
   transition:.2s ease;
 }
 
@@ -405,39 +523,61 @@ select{
   color:#fff;
 }
 
+
+/* =========================================
+   DISCOGRAFÍA
+   MISMO MARGEN QUE MÚSICA
+========================================= */
+
 .ep-section{
   grid-column:1 / -1;
+
   width:100%;
+
   padding-top:55px;
 }
 
 .section-topline{
   display:flex;
+
   justify-content:space-between;
+
   align-items:center;
+
   margin-bottom:20px;
 }
 
 .section-topline h2{
   font-family:"Manrope",sans-serif;
+
   font-size:clamp(36px,4vw,58px);
+
   line-height:1.02;
+
   letter-spacing:-2.5px;
+
   margin:0;
 }
 
 .discography-links{
   display:flex;
+
   align-items:center;
+
   gap:22px;
 }
 
 .discography-links a{
   font-size:10px;
+
   text-transform:uppercase;
+
   letter-spacing:1.5px;
+
   font-weight:700;
+
   opacity:.75;
+
   transition:.2s ease;
 }
 
@@ -447,23 +587,32 @@ select{
 
 .ep-grid{
   display:grid;
+
   grid-template-columns:repeat(5,1fr);
+
   gap:16px;
+
   width:100%;
 }
 
 .ep-card{
   display:block;
+
   min-width:0;
 }
 
 .ep-cover{
   aspect-ratio:1/1;
+
   display:flex;
+
   align-items:center;
   justify-content:center;
+
   color:#fff;
+
   overflow:hidden;
+
   transition:.25s ease;
 }
 
@@ -473,26 +622,74 @@ select{
 
 .ep-cover span{
   font-size:12px;
+
   letter-spacing:4px;
 }
 
 .ep-card h3{
   font-size:14px;
+
   margin:10px 0 2px;
 }
 
+
+/* =========================================
+   PREDICACIONES Y PODCASTS
+========================================= */
+
+.podcasts-section{
+  background:var(--cream);
+}
+
+.podcasts-section .split-photo{
+  background-position:center;
+}
+
+.podcasts-copy{
+  justify-content:center;
+}
+
+.podcasts-copy h2{
+  color:var(--ink);
+}
+
+.podcasts-copy>p{
+  color:var(--muted);
+}
+
+.podcasts-copy .spotify-podcast-btn{
+  width:auto;
+
+  margin-top:22px;
+
+  padding-left:24px;
+  padding-right:24px;
+}
+
+
+/* =========================================
+   SOBRE MÍ
+========================================= */
+
 .split{
   display:grid;
+
   grid-template-columns:1fr 1fr;
+
   padding:0;
+
   background:var(--cream);
+
   color:var(--ink);
 }
 
 .split-copy{
   padding:120px 10% 110px;
+
   display:flex;
+
   flex-direction:column;
+
   align-items:flex-start;
 }
 
@@ -510,6 +707,7 @@ select{
 
 .split-photo{
   min-height:580px;
+
   background-image:
     linear-gradient(
       120deg,
@@ -526,20 +724,32 @@ select{
       #3d3e3c,
       #161818 65%
     );
+
   background-size:cover;
+
   background-position:center;
 }
 
+
+/* =========================================
+   AGENDA
+========================================= */
+
 .agenda{
   min-height:530px;
+
   position:relative;
+
   color:#fff;
+
   overflow:hidden;
 }
 
 .agenda-bg{
   position:absolute;
+
   inset:0;
+
   background-image:
     linear-gradient(
       90deg,
@@ -547,48 +757,67 @@ select{
       #151616 50%,
       #38332e
     );
+
   background-size:cover;
+
   background-position:center;
 }
 
 .agenda-overlay{
   position:absolute;
+
   inset:0;
+
   background:rgba(0,0,0,.43);
 }
 
 .agenda-content{
   position:relative;
+
   z-index:2;
+
   min-height:530px;
+
   max-width:1240px;
+
   margin:auto;
+
   padding:100px 5vw;
+
   display:grid;
+
   grid-template-columns:1fr 330px;
+
   gap:70px;
+
   align-items:center;
 }
 
 .agenda-content h2{
   color:#fff;
+
   margin-bottom:16px;
 }
 
 .agenda-content>div>p:not(.eyebrow){
   color:rgba(255,255,255,.7);
+
   font-size:14px;
 }
 
 .upcoming{
   border-left:1px solid rgba(255,255,255,.3);
+
   padding-left:32px;
 }
 
 .date-item{
   padding:18px 0;
+
   border-bottom:1px solid rgba(255,255,255,.15);
+
   display:flex;
+
   flex-direction:column;
 }
 
@@ -598,16 +827,28 @@ select{
 
 .date-item span{
   font-size:10px;
+
   letter-spacing:1px;
+
   text-transform:uppercase;
+
   opacity:.55;
+
   margin-top:3px;
 }
 
+
+/* =========================================
+   CONTACTO
+========================================= */
+
 .contact{
   display:grid;
+
   grid-template-columns:250px 1fr 210px;
+
   gap:60px;
+
   align-items:start;
 }
 
@@ -621,20 +862,32 @@ select{
 
 .contact-form{
   display:grid;
+
   grid-template-columns:1fr 1fr;
+
   gap:12px;
 }
+
+
+/* CAMPOS MÁS VISIBLES */
 
 .contact-form input,
 .contact-form select,
 .contact-form textarea{
   width:100%;
+
   border:1px solid rgba(24,26,27,.25);
+
   background:rgba(255,255,255,.48);
+
   padding:14px 15px;
+
   outline:none;
+
   color:var(--ink);
+
   border-radius:4px;
+
   transition:
     border-color .2s ease,
     background .2s ease,
@@ -644,6 +897,7 @@ select{
 .contact-form input::placeholder,
 .contact-form textarea::placeholder{
   color:#77746c;
+
   opacity:1;
 }
 
@@ -665,14 +919,19 @@ select{
 .contact-form textarea:focus,
 .contact-form select:focus{
   border-color:#77746c;
+
   background:#fff;
+
   box-shadow:0 0 0 2px rgba(24,26,27,.06);
 }
 
 .big-socials{
   display:flex;
+
   flex-direction:column;
+
   gap:8px;
+
   font-size:12px;
 }
 
@@ -682,22 +941,40 @@ select{
 
 .signature{
   font-family:"Permanent Marker",cursive;
+
   font-size:23px;
+
   line-height:1.1;
+
   transform:rotate(-5deg);
+
   margin-top:45px;
 }
 
+
+/* =========================================
+   FOOTER
+========================================= */
+
 .footer{
   min-height:90px;
+
   background:#111314;
+
   color:#fff;
+
   display:flex;
+
   align-items:center;
+
   justify-content:space-between;
+
   padding:0 5vw;
+
   font-size:9px;
+
   letter-spacing:1.6px;
+
   text-transform:uppercase;
 }
 
@@ -713,6 +990,11 @@ select{
   opacity:1;
 }
 
+
+/* =========================================
+   TABLET
+========================================= */
+
 @media(max-width:1100px){
 
   .ep-grid{
@@ -720,6 +1002,7 @@ select{
   }
 
 }
+
 
 @media(max-width:950px){
 
@@ -737,6 +1020,7 @@ select{
 
   .section-intro{
     max-width:600px;
+
     margin-bottom:35px;
   }
 
@@ -758,10 +1042,16 @@ select{
 
 }
 
+
+/* =========================================
+   MOBILE
+========================================= */
+
 @media(max-width:700px){
 
   .site-header{
     height:68px;
+
     padding:0 6vw;
   }
 
@@ -771,13 +1061,20 @@ select{
 
   .nav{
     position:absolute;
+
     top:68px;
+
     left:5vw;
     right:5vw;
+
     background:rgba(17,19,20,.96);
+
     padding:22px;
+
     display:none;
+
     flex-direction:column;
+
     gap:18px;
   }
 
@@ -785,17 +1082,22 @@ select{
     display:flex;
   }
 
+
+  /* HERO */
+
   .hero{
     min-height:700px;
   }
 
   .hero-content{
     margin-top:100px;
+
     text-align:left;
   }
 
   .hero h1{
     font-size:58px;
+
     letter-spacing:-3px;
   }
 
@@ -805,19 +1107,26 @@ select{
 
   .tagline{
     font-size:10px;
+
     letter-spacing:3px;
+
     line-height:1.6;
   }
 
   .hero-actions{
     justify-content:flex-start;
+
     flex-direction:column;
+
     align-items:flex-start;
   }
 
   .btn{
     min-height:43px;
   }
+
+
+  /* SECCIONES */
 
   .section{
     padding:75px 6vw;
@@ -827,10 +1136,17 @@ select{
     padding-top:80px;
   }
 
+
+  /* MÚSICA */
+
   .release-grid{
     grid-template-columns:1fr 1fr;
+
     gap:12px;
   }
+
+
+  /* DISCOGRAFÍA */
 
   .ep-section{
     padding-top:45px;
@@ -838,18 +1154,39 @@ select{
 
   .ep-grid{
     grid-template-columns:1fr 1fr;
+
     gap:12px;
   }
 
   .section-topline{
     align-items:flex-start;
+
     gap:20px;
   }
 
   .discography-links{
     gap:14px;
+
     flex-shrink:0;
   }
+
+
+  /* PREDICACIONES Y PODCASTS */
+
+  .podcasts-copy{
+    padding:80px 6vw;
+  }
+
+  .podcasts-section .split-photo{
+    min-height:390px;
+  }
+
+  .podcasts-copy .spotify-podcast-btn{
+    width:auto;
+  }
+
+
+  /* SOBRE MÍ */
 
   .split{
     grid-template-columns:1fr;
@@ -863,20 +1200,31 @@ select{
     min-height:390px;
   }
 
+
+  /* AGENDA */
+
   .agenda-content{
     grid-template-columns:1fr;
+
     padding:75px 6vw;
+
     gap:45px;
   }
 
   .upcoming{
     border-left:0;
+
     border-top:1px solid rgba(255,255,255,.3);
+
     padding:30px 0 0;
   }
 
+
+  /* CONTACTO */
+
   .contact{
     grid-template-columns:1fr;
+
     gap:35px;
   }
 
@@ -891,14 +1239,25 @@ select{
     grid-column:1;
   }
 
+
+  /* FOOTER */
+
   .footer{
     padding:25px 6vw;
+
     flex-direction:column;
+
     gap:15px;
+
     text-align:center;
   }
 
 }
+
+
+/* =========================================
+   MOBILE PEQUEÑO
+========================================= */
 
 @media(max-width:440px){
 
@@ -927,4 +1286,3 @@ select{
   }
 
 }
-```
