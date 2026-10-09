@@ -114,6 +114,14 @@ select {
   border-color: #fff;
 }
 
+/* Logos PNG de las redes sociales del encabezado */
+.social-mini .social-logo {
+  display: block;
+  width: 15px;
+  height: 15px;
+  object-fit: contain;
+}
+
 .menu-toggle {
   display: none;
 
