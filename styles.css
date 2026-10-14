@@ -117,8 +117,8 @@ select {
 /* Logos PNG de las redes sociales del encabezado */
 .social-mini .social-logo {
   display: block;
-  width: 15px;
-  height: 15px;
+  width: 25px;
+  height: 25px;
   object-fit: contain;
 }
 
@@ -1238,5 +1238,34 @@ select {
 
   .discography-links {
     align-self: flex-start;
+  }
+}
+
+.nav-social {
+  display: none;
+}
+
+@media (max-width: 950px) {
+  .nav-social {
+    display: flex;
+    gap: 12px;
+    padding-top: 18px;
+    margin-top: 4px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  .nav-social a {
+    width: 32px;
+    height: 32px;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+  }
+
+  .nav-social .social-logo {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
   }
 }
