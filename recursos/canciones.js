@@ -1341,7 +1341,7 @@ const SONGS = [
         "text": "INTRO"
       },
       {
-        "type": "lyric",
+        "type": "chords",
         "text": "Bbm Ab Ebm x2"
       },
       {
@@ -1853,7 +1853,7 @@ const SONGS = [
         "text": "Que seas el centro, seas el centro"
       },
       {
-        "type": "section",
+        "type": "chords",
         "text": "E          B"
       },
       {
@@ -2715,7 +2715,7 @@ const SONGS = [
         "text": "INTRO"
       },
       {
-        "type": "lyric",
+        "type": "chords",
         "text": "Bbm Ab Ebm x2"
       },
       {
@@ -3705,7 +3705,7 @@ const SONGS = [
         "text": "Que seas el centro, seas el centro"
       },
       {
-        "type": "section",
+        "type": "chords",
         "text": "E          B"
       },
       {

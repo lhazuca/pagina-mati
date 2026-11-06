@@ -18,15 +18,16 @@ input,select,button{font:inherit;border:1px solid var(--line);border-radius:10px
 .sheet h2{margin:0 0 6px;font-size:28px}.meta{color:#555;font-size:13px}
 .actions{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0}.actions button{background:#222;color:#fff;border:0;cursor:pointer}
 .actions button.primary{background:#a77c39}.key{font-weight:800;color:#805b23}
-.chart{display:grid;grid-template-columns:1fr 1fr;gap:22px 32px}
+.chart{columns:2;column-gap:40px}
+.part{break-inside:avoid;margin-bottom:18px}
 .lineblock{break-inside:avoid;margin:0 0 12px;white-space:pre-wrap}
-.section{font-weight:800;font-size:13px;letter-spacing:.07em;margin:18px 0 8px;color:#805b23}
-.chords{font-family:ui-monospace,Consolas,monospace;font-weight:700;color:#805b23;white-space:pre;overflow-wrap:anywhere}
-.lyric{font-size:15px;line-height:1.5;white-space:pre-wrap}
+.section{font-weight:800;font-size:13px;letter-spacing:.07em;margin:0 0 8px;color:#805b23}
+.chords{font-family:ui-monospace,Consolas,monospace;font-size:15px;font-weight:700;color:#805b23;white-space:pre;overflow-x:auto}
+.lyric{font-family:ui-monospace,Consolas,monospace;font-size:15px;line-height:1.5;white-space:pre-wrap;margin-bottom:6px}
 .blank{height:8px}
 .foot{color:var(--muted);font-size:12px;margin-top:24px}
-@media(max-width:650px){.controls{grid-template-columns:1fr}.chart{grid-template-columns:1fr}}
-@media print{body{background:#fff}.back,.intro,.controls,.list,.actions,.foot{display:none!important}main{width:100%;margin:0}.sheet{display:block!important;padding:0}.chart{grid-template-columns:1fr 1fr;gap:12px 24px}}
+@media(max-width:650px){.controls{grid-template-columns:1fr}.chart{columns:1}}
+@media print{body{background:#fff}.back,.intro,.controls,.list,.actions,.foot{display:none!important}main{width:100%;margin:0}.sheet{display:block!important;padding:0}.chart{columns:2;column-gap:24px}}
 </style></head>
 <body><main>
 <a class="back" href="../index.html#discografia">← Volver a la web</a>
@@ -38,7 +39,7 @@ input,select,button{font:inherit;border:1px solid var(--line);border-radius:10px
 <div id="chart" class="chart"></div><p class="meta" id="credits">Música y letra según chart original.</p></section>
 <p class="foot">Los charts se presentan a partir de los documentos originales facilitados por el artista.</p>
 </main>
-<script src="canciones.js?v=20261106"></script>
+<script src="canciones.js?v=20261106b"></script>
 <script>
 const $=id=>document.getElementById(id);let current=null,shift=0;
 const sharp=['C','C#','D','D#','E','F','F#','G','G#','A','A#','B'],flat=['C','Db','D','Eb','E','F','Gb','G','Ab','A','Bb','B'];
@@ -52,13 +53,15 @@ function chordToken(tok,s){
 function transposeLine(line,s){return line.replace(/\S+/g,t=>chordToken(t,s))}
 function renderChart(){
  $('chart').innerHTML='';
+ let part=null;
  current.lines.forEach(line=>{
+  if(line.type==='section'||!part){part=document.createElement('div');part.className='part';$('chart').appendChild(part)}
   let el=document.createElement('div');el.className='lineblock';
   if(line.type==='section'){el.className='section';el.textContent=line.text}
   else if(line.type==='chords'){el.className='chords';el.textContent=transposeLine(line.text,shift)}
   else if(line.type==='lyric'){el.className='lyric';el.textContent=line.text}
   else {el.className='blank';}
-  $('chart').appendChild(el);
+  part.appendChild(el);
  });
  let key=current.key||'';
  $('keyline').innerHTML='Tonalidad: <strong class="key"></strong>';
