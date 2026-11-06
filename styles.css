@@ -466,6 +466,16 @@ select {
   transform: translateY(-3px);
 }
 
+.release-image img,
+.ep-cover img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
 .release-card h3 {
   font-size: 15px;
 
