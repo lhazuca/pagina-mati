@@ -29,8 +29,8 @@ input,select,button{font:inherit;border:1px solid var(--line);border-radius:10px
 @media print{body{background:#fff}.back,.intro,.controls,.list,.actions,.foot{display:none!important}main{width:100%;margin:0}.sheet{display:block!important;padding:0}.chart{grid-template-columns:1fr 1fr;gap:12px 24px}}
 </style></head>
 <body><main>
-<a class="back" href="index.html#discografia">← Volver a la web</a>
-<h1>Biblioteca de canciones</h1><p class="intro">Buscá una canción de la discografía y transportá sus acordes a la tonalidad que necesites.</p>
+<a class="back" href="../index.html#discografia">← Volver a la web</a>
+<h1>Biblioteca de canciones</h1><p class="intro">Buscá una canción por título o EP y transportá sus acordes. Las canciones publicadas en más de un EP aparecen en cada lanzamiento correspondiente.</p>
 <div class="controls"><input id="search" placeholder="Buscar canción..." aria-label="Buscar canción"><select id="ep"><option value="">Todos los EPs</option><option>EP 01 · Inúndame</option><option>EP 02 · Profundo Mar</option><option>EP 03 · Me Perdonó</option><option>EP 04 · Sesiones Acústicas</option><option>EP 05 · NDA en vivo</option></select></div>
 <div id="list" class="list"></div>
 <section id="sheet" class="sheet"><div class="sheethead"><h2 id="title"></h2><div class="meta" id="meta"></div><div class="meta" id="keyline"></div></div>
@@ -65,8 +65,8 @@ function renderChart(){
  $('keyline').querySelector('strong').textContent=key.split(/\s*-\s*/).map(k=>transposeTokenKey(k,shift)).join(' – ')+(shift?' (transportada)':' (original)');
 }
 function transposeTokenKey(k,s){let m=k.match(/^([A-G](?:#|b)?)(.*)$/);return m&&noteMap[m[1]]!==undefined?transposeNote(m[1],s,/b/.test(m[1]))+m[2]:k}
-function selectSong(song){current=song;shift=0;$('sheet').classList.add('show');$('title').textContent=song.title;$('meta').textContent=[song.ep,song.bpm?song.bpm+' BPM':'',song.meter?'Compás '+song.meter:''].filter(Boolean).join(' · ');$('credits').textContent='Estructura: '+(song.structure||'No especificada')+' · Chart original';renderChart();document.querySelectorAll('.song').forEach(b=>b.classList.toggle('active',b.dataset.title===song.title));$('sheet').scrollIntoView({behavior:'smooth',block:'start'})}
-function renderList(){let q=$('search').value.toLocaleLowerCase('es'),ep=$('ep').value;$('list').innerHTML='';let matches=SONGS.filter(s=>(!ep||s.ep===ep)&&s.title.toLocaleLowerCase('es').includes(q));matches.forEach(s=>{let b=document.createElement('button');b.className='song';b.dataset.title=s.title;b.innerHTML='<b></b><small></small>';b.querySelector('b').textContent=s.title;b.querySelector('small').textContent=s.ep+' · '+s.key;b.addEventListener('click',()=>selectSong(s));$('list').appendChild(b)});if(!matches.length)$('list').textContent='No encontramos canciones con esa búsqueda.'}
+function selectSong(song){current=song;shift=0;$('sheet').classList.add('show');$('title').textContent=song.title;$('meta').textContent=[song.ep,song.bpm?song.bpm+' BPM':'',song.meter?'Compás '+song.meter:''].filter(Boolean).join(' · ');$('credits').textContent='Estructura: '+(song.structure||'No especificada')+' · Chart original';renderChart();document.querySelectorAll('.song').forEach(b=>b.classList.toggle('active',b.dataset.title===song.title&&b.dataset.ep===song.ep));$('sheet').scrollIntoView({behavior:'smooth',block:'start'})}
+function renderList(){let q=$('search').value.toLocaleLowerCase('es'),ep=$('ep').value;$('list').innerHTML='';let matches=SONGS.filter(s=>(!ep||s.ep===ep)&&s.title.toLocaleLowerCase('es').includes(q));matches.forEach(s=>{let b=document.createElement('button');b.className='song';b.dataset.title=s.title;b.dataset.ep=s.ep;b.innerHTML='<b></b><small></small>';b.querySelector('b').textContent=s.title;b.querySelector('small').textContent=s.ep+' · '+s.key;b.addEventListener('click',()=>selectSong(s));$('list').appendChild(b)});if(!matches.length)$('list').textContent='No encontramos canciones con esa búsqueda.'}
 $('search').addEventListener('input',renderList);$('ep').addEventListener('change',renderList);
 $('down').onclick=()=>{shift--;renderChart()};$('up').onclick=()=>{shift++;renderChart()};$('reset').onclick=()=>{shift=0;renderChart()};$('print').onclick=()=>window.print();
 renderList();
