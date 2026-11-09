@@ -72,5 +72,7 @@ function selectSong(song){current=song;shift=0;$('sheet').classList.add('show');
 function renderList(){let q=$('search').value.toLocaleLowerCase('es'),ep=$('ep').value;$('list').innerHTML='';let matches=SONGS.filter(s=>(!ep||s.ep===ep)&&s.title.toLocaleLowerCase('es').includes(q));matches.forEach(s=>{let b=document.createElement('button');b.className='song';b.dataset.title=s.title;b.dataset.ep=s.ep;b.innerHTML='<b></b><small></small>';b.querySelector('b').textContent=s.title;b.querySelector('small').textContent=s.ep+' · '+s.key;b.addEventListener('click',()=>selectSong(s));$('list').appendChild(b)});if(!matches.length)$('list').textContent='No encontramos canciones con esa búsqueda.'}
 $('search').addEventListener('input',renderList);$('ep').addEventListener('change',renderList);
 $('down').onclick=()=>{shift--;renderChart()};$('up').onclick=()=>{shift++;renderChart()};$('reset').onclick=()=>{shift=0;renderChart()};$('print').onclick=()=>window.print();
+const epParam=new URLSearchParams(location.search).get('ep');
+if(epParam){const opt=[...$('ep').options].find(o=>o.value.startsWith('EP '+epParam));if(opt)$('ep').value=opt.value}
 renderList();
 </script></body></html>
